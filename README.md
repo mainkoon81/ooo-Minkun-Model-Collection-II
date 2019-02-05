@@ -24,8 +24,12 @@ Since **discriminant** cares `P(Y|X)` only, while **generative** cares `P(X,Y) a
  - If assuming the Grp_feature distribution `P(x|g)` is **multivariate Gaussian**, what will happen? In the multivariate version, `µ` is a mean vector and σ is replaced by a covariance matrix `Σ`.
  <img src="https://user-images.githubusercontent.com/31917400/52270233-3d9b3500-2938-11e9-9585-63ef137328a4.jpg" />
 
-
-
+# two functions to maximize `P(g|x)`.
+ - To minimizing **Mahalonobis Distance** 
+ 
+ - When you plug in `x`, the Grp 'g' with `µ` and `Σ` that gives max value of LD-function is where `x` most likely belong to.
+ 
+ 
 
 
 
