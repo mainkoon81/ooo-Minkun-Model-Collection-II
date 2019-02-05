@@ -24,6 +24,14 @@ Since **discriminant** cares `P(Y|X)` only, while **generative** cares `P(X,Y) a
 
 
 
+
+
+### 2. K-Nearest Neighbors Analysis
+
+
+
+
+
 ## B> Generative Analysis
 ### 1. Latent Dirichlet Allocation
 
