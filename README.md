@@ -18,7 +18,7 @@ Since **discriminant** cares `P(Y|X)` only, while **generative** cares `P(X,Y) a
  - This probabilities come from a certain distribution(parametric)...in detail, 
  <img src="https://user-images.githubusercontent.com/31917400/52260774-0cfad180-291f-11e9-804c-8e23a91dd62f.jpg" />
 
- - If assuming the feature distribution `P(x|g)` is **multivariate Gaussian**, what will happen?
+ - If assuming the Grp_feature distribution `P(x|g)` is **multivariate Gaussian**, what will happen?
 
 
 
