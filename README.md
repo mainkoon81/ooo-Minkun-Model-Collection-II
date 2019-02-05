@@ -7,8 +7,24 @@ A generative algorithm models how the data was "generated", so you ask it "what'
 
 Since **discriminant** cares `P(Y|X)` only, while **generative** cares `P(X,Y) and P(X)` at the same time, in order to predict **P(Y|X)** well, the generative model has **less degree of freedom** in the model compared to discriminant model. So generative model is more robust, less prone to overfitting while discriminant is the other way around. So discriminative models usually tend to do better if you have lots of data; generative models may be better if you have some extra unlabeled data(the generative model has its own advantages such as the capability of dealing with missing data). 
 
+## A> Discriminant Analysis
+ - As a **Supervised method**, labels are used to learn the `data structure` which allows the **classification** of future observations.
+ - Rule-based Classification Algorithm:
+   - LDA(parametric), QDA
+   - KNN
+### 1. Linear Discriminant Analysis
+# `P(g|x)`
+ - Probability that `x` belongs to the group `g`. Which Grp they belong to? 
+ - This probabilities come from a certain distribution(parametric)...in detail, 
+ <img src="https://user-images.githubusercontent.com/31917400/52260774-0cfad180-291f-11e9-804c-8e23a91dd62f.jpg" />
+
+ - If assuming the feature distribution `P(x|g)` is **multivariate Gaussian**, what will happen?
 
 
+
+
+
+## B> Generative Analysis
 ### 1. Latent Dirichlet Allocation
 
 
