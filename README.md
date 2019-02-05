@@ -14,11 +14,15 @@ Since **discriminant** cares `P(Y|X)` only, while **generative** cares `P(X,Y) a
    - KNN
 ### 1. Linear Discriminant Analysis
 # `P(g|x)`
+ - The membership is the parameter to estimate. 
  - Probability that `x` belongs to the group `g`. Which Grp they belong to? 
  - This probabilities come from a certain distribution(parametric)...in detail, 
  <img src="https://user-images.githubusercontent.com/31917400/52262491-86e18980-2924-11e9-9c4f-65a380b0c5c7.jpg" />
 
- - If assuming the Grp_feature distribution `P(x|g)` is **multivariate Gaussian**, what will happen?
+ - So let's figure out `P(x|g)`. 
+ - The distribution of data points in Grp_g. 
+ - If assuming the Grp_feature distribution `P(x|g)` is **multivariate Gaussian**, what will happen? In the multivariate version, `µ` is a mean vector and σ is replaced by a covariance matrix `Σ`.
+ <img src="https://user-images.githubusercontent.com/31917400/52270233-3d9b3500-2938-11e9-9585-63ef137328a4.jpg" />
 
 
 
