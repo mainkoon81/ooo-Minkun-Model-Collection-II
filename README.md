@@ -28,9 +28,9 @@ Since **discriminant** cares `P(Y|X)` only, while **generative** cares `P(X,Y) a
  - Assumption: **all Grp share the equal `Σ` matrix**(in QDA, the equal covariance assumption does not hold, thus you cannot drop `-0.5log(|Σ|)` term).  
  - Which 'g' has the highest probability of owning the new p-dimensional datapoint? 
    - Eventually, Min/Max depends on the unique parameter(`µ,Σ`) of each Grp. 
-   - When you plug in x vector, `µ,Σ` that minimizing **Mahalonobis Distance**. 
+   - When you plug in x vector, `µ,Σ` that minimizing **Mahalonobis Distance**, is telling you the membership of the vector `x`.  
    <img src="https://user-images.githubusercontent.com/31917400/52273637-57417a00-2942-11e9-8881-f7279ec947d4.jpg" />
-   - When you plug in x vector, `µ,Σ` that maximizing **LD-function**
+   - When you plug in x vector, `µ,Σ` that maximizing **LD-function**, is telling you the membership of the vector `x`.
    <img src="https://user-images.githubusercontent.com/31917400/52273639-59a3d400-2942-11e9-900e-077ceabfb0b9.jpg" />
  
  - In practice,
