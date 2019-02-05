@@ -16,7 +16,8 @@ Since **discriminant** cares `P(Y|X)` only, while **generative** cares `P(X,Y) a
 # `P(g|x)`
  - The membership is the parameter to estimate. 
  - Probability that `x` belongs to the group `g`. Which Grp they belong to? 
- - This probabilities come from a certain distribution(parametric)...in detail, 
+ - p is the dimension.
+ - This probabilities come from a certain distribution(with different parametrization)...in detail, 
  <img src="https://user-images.githubusercontent.com/31917400/52262491-86e18980-2924-11e9-9c4f-65a380b0c5c7.jpg" />
 
  - So let's figure out the probability distribution `P(x|g)`. This is the distribution of data points in each group. 
@@ -24,10 +25,11 @@ Since **discriminant** cares `P(Y|X)` only, while **generative** cares `P(X,Y) a
  <img src="https://user-images.githubusercontent.com/31917400/52270233-3d9b3500-2938-11e9-9585-63ef137328a4.jpg" />
 
 # two functions to maximize `P(g|x)`.
+ - Which 'g' has the highest probability of owning the new p-dimensional datapoint? 
  - To minimizing **Mahalonobis Distance** 
- 
+ <img src="https://user-images.githubusercontent.com/31917400/52273637-57417a00-2942-11e9-8881-f7279ec947d4.jpg" />
  - When you plug in `x`, the Grp 'g' with `µ` and `Σ` that gives max value of LD-function is where `x` most likely belong to.
- 
+ <img src="https://user-images.githubusercontent.com/31917400/52273639-59a3d400-2942-11e9-900e-077ceabfb0b9.jpg" />
  
 
 
