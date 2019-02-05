@@ -4,8 +4,18 @@
 <img src="https://user-images.githubusercontent.com/31917400/52206132-3a894180-2871-11e9-8cdd-81ac93c74e1d.jpg" />
 
 A generative algorithm models how the data was "generated", so you ask it "what's the likelihood this or that class generated this instance?" and pick the one with the **better probability**. A discriminative algorithm uses the data to create a decision boundary, so you ask it "what side of the decision boundary is this instance on?" So it doesn't create a model of how the data was generated, it makes a model of what it thinks the boundary between classes looks like.
+ - Estimate joint probability P(Y, X) = P(Y|X)P(X)
+ - Estimates not only probability of labels but also the features
+ - Once model is fit, can be used to generate data
+ - LDA, QDA, Naive Bayes, etc
+ - (-) Often works worse, particularly when assumptions are violated
 
 Since **discriminative** cares `P(Y|X)` only, while **generative** cares `P(X,Y) and P(X)` at the same time, in order to predict **P(Y|X)** well, the generative model has **less degree of freedom** in the model compared to discriminative model. So generative model is more robust, less prone to overfitting while discriminative is the other way around. So discriminative models usually tend to do better if you have lots of data; generative models may be better if you have some extra unlabeled data(the generative model has its own advantages such as the capability of dealing with missing data). 
+ - Estimate conditional models P(Y|X)
+ - Linear regression, Logistic regression
+
+
+
 
 ## A> Generative Analysis
 
@@ -37,6 +47,10 @@ Since **discriminative** cares `P(Y|X)` only, while **generative** cares `P(X,Y)
  - In practice,
  <img src="https://user-images.githubusercontent.com/31917400/52275738-4dbb1080-2948-11e9-9768-3da4a0c5c773.jpg" />
 
+ - Log Odd Ratio
+   - What if the Grp membership probability of 'g1', 'g2' are the same? 
+   - The vector point is the part of `Linear Decision line` !!!
+   <img src="https://user-images.githubusercontent.com/31917400/52279937-9a0b4e00-2952-11e9-96b6-429365f02fe8.jpg" />
 
 
 
