@@ -44,19 +44,19 @@ Since **discriminative** cares `P(Y|X)` only, while **generative** cares `P(X,Y)
    - When you plug in x vector, `µ,Σ` that maximizing **LD-function**, is telling you the membership of the vector `x`.
    <img src="https://user-images.githubusercontent.com/31917400/52273639-59a3d400-2942-11e9-900e-077ceabfb0b9.jpg" />
  
- - In practice,
+ > In practice,
  <img src="https://user-images.githubusercontent.com/31917400/52275738-4dbb1080-2948-11e9-9768-3da4a0c5c773.jpg" />
 
- - Log Odd Ratio
+ > **Log Odd Ratio** and `Linear Decision Boundary`
    - What if the Grp membership probability of 'g1', 'g2' are the same? 
-   - Then we can say that the given vector point is the part of `Linear Decision line` !!!
+   - Then we can say that the given vector point is the part of `Linear Decision Boundary` !!!
    <img src="https://user-images.githubusercontent.com/31917400/52279937-9a0b4e00-2952-11e9-96b6-429365f02fe8.jpg" />
 
-
-
-### 2. K-Nearest Neighbors Analysis
-
-
+ > LDA and Logistic regression
+   - LDA is Generative while LogisticRegression is discriminative.
+   - In LDA, the log-membership odd between Grps are **linear functions** of the vector data x. This is due to the assumption of `Gaussian densities` and `common covariance matrices`.
+   - In LogisticRegression, the log-membership odd between Grps are **linear functions** of the vector data x as well. 
+   <img src="https://user-images.githubusercontent.com/31917400/52280951-eb1c4180-2954-11e9-838c-c370b861ab37.jpg" />
 
 
 
