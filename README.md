@@ -54,6 +54,9 @@ Since **discriminative** cares `P(Y|X)` only, while **generative** cares `P(X,Y)
 
  > LDA and Logistic regression
    - LDA is Generative while LogisticRegression is discriminative.
+   - LDA operates by maximizing the log-likelihood based on an assumption of normality and homogeneity while Logistic regression makes no assumption about P(X), and estimates the parameters of P(g|x) by maximizing the conditional likelihood. 
+   - logistic regression would presumably be more robust if LDA’s distributional assumptions (Gaussian?) are violated. 
+   - In principle, LDA should perform poorly when outliers are present, as these usually cause problems when assuming normality. 
    - In LDA, the log-membership odd between Grps are **linear functions** of the vector data x. This is due to the assumption of `Gaussian densities` and `common covariance matrices`.
    - In LogisticRegression, the log-membership odd between Grps are **linear functions** of the vector data x as well. 
    <img src="https://user-images.githubusercontent.com/31917400/52282688-e6f22300-2958-11e9-923a-5be3e22e8de9.jpg" />
