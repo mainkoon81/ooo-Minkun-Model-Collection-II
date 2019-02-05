@@ -26,8 +26,8 @@ Since **discriminant** cares `P(Y|X)` only, while **generative** cares `P(X,Y) a
 # two functions to maximize `P(g|x)`.
  - So if we know the **distribution of x in each Grp: `P(x|g)`**, we can classify the new p-dimensional data points given in the future. 
  - Assumption: **all Grp share the equal `Σ` matrix**(in QDA, the equal covariance assumption does not hold, thus you cannot drop `-0.5log(|Σ|)` term).  
- - Min/Max depends on the unique parameter(`µ,Σ`) of each Grp. 
  - Which 'g' has the highest probability of owning the new p-dimensional datapoint? 
+   - Eventually, Min/Max depends on the unique parameter(`µ,Σ`) of each Grp. 
    - When you plug in x vector, `µ,Σ` that minimizing **Mahalonobis Distance**. 
    <img src="https://user-images.githubusercontent.com/31917400/52273637-57417a00-2942-11e9-8881-f7279ec947d4.jpg" />
    - When you plug in x vector, `µ,Σ` that maximizing **LD-function**
