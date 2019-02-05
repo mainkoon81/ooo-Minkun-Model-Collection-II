@@ -35,7 +35,7 @@ Since **discriminant** cares `P(Y|X)` only, while **generative** cares `P(X,Y) a
    <img src="https://user-images.githubusercontent.com/31917400/52273639-59a3d400-2942-11e9-900e-077ceabfb0b9.jpg" />
  
  - In practice,
- <img src="https://user-images.githubusercontent.com/31917400/52275546-c2da1600-2947-11e9-91fc-cdb49eec7c3e.jpg" />
+ <img src="https://user-images.githubusercontent.com/31917400/52275738-4dbb1080-2948-11e9-9768-3da4a0c5c773.jpg" />
 
 
 
