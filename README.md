@@ -16,6 +16,7 @@ Since **discriminative** cares `P(Y|X)` only, while **generative** cares `P(X,Y)
 ### 1. Linear Discriminant Analysis
 # `P(g|x)`
  - Predict the membership of the given vector `x`. 
+ - We have a dataset containing lots of vectors(rows) and their labels. 
  - What's the probability that the vector `x` belongs to the Grp `g`? (p is the dimension of the vector x).
  - This probabilities come from a certain **likelihood distribution of Grp**(with different parametrization)...in detail, 
  <img src="https://user-images.githubusercontent.com/31917400/52262491-86e18980-2924-11e9-9c4f-65a380b0c5c7.jpg" />
