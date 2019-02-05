@@ -50,7 +50,7 @@ Since **discriminative** cares `P(Y|X)` only, while **generative** cares `P(X,Y)
  > **Log Odd Ratio** and `Linear Decision Boundary`
    - What if the Grp membership probability of 'g1', 'g2' are the same? 
    - Then we can say that the given vector point is the part of `Linear Decision Boundary` !!!
-   <img src="https://user-images.githubusercontent.com/31917400/52279937-9a0b4e00-2952-11e9-96b6-429365f02fe8.jpg" />
+   <img src="https://user-images.githubusercontent.com/31917400/52283578-a2678700-295a-11e9-98ae-817a9f91afdc.jpg" />
 
  > LDA and Logistic regression
    - LDA is Generative while LogisticRegression is discriminative.
