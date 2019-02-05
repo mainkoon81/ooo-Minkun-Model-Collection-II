@@ -19,7 +19,7 @@ Since **discriminative** cares `P(Y|X)` only, while **generative** cares `P(X,Y)
  - We have a dataset containing lots of vector observations(rows) and their labels. 
  - What's the probability that the new vector observation `x` belongs to the Grp `g`? (p is the dimension of the vector x).
  - This probabilities come from a certain **likelihood distribution of Grp**(with different parametrization)...in detail, 
- <img src="https://user-images.githubusercontent.com/31917400/52262491-86e18980-2924-11e9-9c4f-65a380b0c5c7.jpg" />
+ <img src="https://user-images.githubusercontent.com/31917400/52278515-2156c280-294f-11e9-9bc2-6e40c4563b8f.jpg" />
 
  - So let's figure out the probability distribution `P(x|g)`. This is the distribution of data points in each group. If we know the **distribution of x in each Grp: `P(x|g)`**, we can classify the new p-dimensional data points given in the future...so done and dusted. What if choosing the Grp_feature distribution `P(x|g)` as **multivariate Gaussian** ? (Of course, in the multivariate version, `µ` is a mean vector and σ is replaced by a covariance matrix `Σ`).
  <img src="https://user-images.githubusercontent.com/31917400/52270233-3d9b3500-2938-11e9-9585-63ef137328a4.jpg" />
