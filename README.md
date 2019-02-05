@@ -61,10 +61,12 @@ Since **discriminative** cares `P(Y|X)` only, while **generative** cares `P(X,Y)
    - In LogisticRegression, the log-membership odd between Grps are **linear functions** of the vector data x as well. 
    <img src="https://user-images.githubusercontent.com/31917400/52282688-e6f22300-2958-11e9-923a-5be3e22e8de9.jpg" />
 
-
-
-### 3. Latent Dirichlet Allocation
-
+### 2. Latent Dirichlet Allocation
+ - LDA is a “generative probabilistic model” of a collection of **composites made up of parts**. In terms of topic modeling, the composites are `documents` and the parts are `words`. 
+ - The probabilistic topic model estimated by LDA consists of two tables (matrices):
+   - 1st table: the probability of selecting a particular `part(word)` when sampling a particular **topic(category)**.
+   - 2nd table: the probability of selecting a particular **topic(category)** when sampling a particular `document`.
+   
 
 
 
