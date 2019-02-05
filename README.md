@@ -14,7 +14,7 @@ Since **discriminant** cares `P(Y|X)` only, while **generative** cares `P(X,Y) a
    - KNN
 ### 1. Linear Discriminant Analysis
 # `P(g|x)`
- - The membership is the parameter to estimate. 
+ - Predict the membership of the given vector `x`. 
  - What's the probability that the vector `x` belongs to the Grp `g`? (p is the dimension of the vector x).
  - This probabilities come from a certain distribution of Grp(with different parametrization)...in detail, 
  <img src="https://user-images.githubusercontent.com/31917400/52262491-86e18980-2924-11e9-9c4f-65a380b0c5c7.jpg" />
