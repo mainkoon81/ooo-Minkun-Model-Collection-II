@@ -25,12 +25,14 @@ Since **discriminant** cares `P(Y|X)` only, while **generative** cares `P(X,Y) a
  <img src="https://user-images.githubusercontent.com/31917400/52270233-3d9b3500-2938-11e9-9585-63ef137328a4.jpg" />
 
 # two functions to maximize `P(g|x)`.
- - Assumption: **all Grp share the equal `Σ` matrix**(so in QDA, you cannot drop `-0.5log(|Σ|)` term).  
+ - So if we know the **distribution of x in each Grp: `P(x|g)`**, we can classify the new p-dimensional data points given.  
+ - Assumption: **all Grp share the equal `Σ` matrix**(in QDA, the equal covariance assumption does not hold, thus you cannot drop `-0.5log(|Σ|)` term).  
+ - Min/Max depends on the unique parameter(`µ,Σ`) of each Grp. 
  - Which 'g' has the highest probability of owning the new p-dimensional datapoint? 
- - To minimizing **Mahalonobis Distance** 
- <img src="https://user-images.githubusercontent.com/31917400/52273637-57417a00-2942-11e9-8881-f7279ec947d4.jpg" />
- - When you plug in `x`, the Grp 'g' with `µ` and `Σ` that gives max value of LD-function is where `x` most likely belong to.
- <img src="https://user-images.githubusercontent.com/31917400/52273639-59a3d400-2942-11e9-900e-077ceabfb0b9.jpg" />
+   - When you plug in x vector, `µ,Σ` that minimizing **Mahalonobis Distance**. 
+   <img src="https://user-images.githubusercontent.com/31917400/52273637-57417a00-2942-11e9-8881-f7279ec947d4.jpg" />
+   - When you plug in x vector, `µ,Σ` that maximizing **LD-function**
+   <img src="https://user-images.githubusercontent.com/31917400/52273639-59a3d400-2942-11e9-900e-077ceabfb0b9.jpg" />
  
 
 
