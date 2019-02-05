@@ -56,7 +56,7 @@ Since **discriminative** cares `P(Y|X)` only, while **generative** cares `P(X,Y)
    - LDA is Generative while LogisticRegression is discriminative.
    - In LDA, the log-membership odd between Grps are **linear functions** of the vector data x. This is due to the assumption of `Gaussian densities` and `common covariance matrices`.
    - In LogisticRegression, the log-membership odd between Grps are **linear functions** of the vector data x as well. 
-   <img src="https://user-images.githubusercontent.com/31917400/52280951-eb1c4180-2954-11e9-838c-c370b861ab37.jpg" />
+   <img src="https://user-images.githubusercontent.com/31917400/52281442-17848d80-2956-11e9-949e-4f0a99125bdc.jpg" />
 
 
 
