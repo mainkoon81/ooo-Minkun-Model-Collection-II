@@ -19,7 +19,7 @@ Since **discriminant** cares `P(Y|X)` only, while **generative** cares `P(X,Y) a
  - This probabilities come from a certain distribution of Grp(with different parametrization)...in detail, 
  <img src="https://user-images.githubusercontent.com/31917400/52262491-86e18980-2924-11e9-9c4f-65a380b0c5c7.jpg" />
 
- - So let's figure out the probability distribution `P(x|g)`. This is the distribution of data points in each group. If we know the **distribution of x in each Grp: `P(x|g)`**, we can classify the new p-dimensional data points given in the future. If choosing the Grp_feature distribution `P(x|g)` as **multivariate Gaussian**, what will happen? (Of course, in the multivariate version, `µ` is a mean vector and σ is replaced by a covariance matrix `Σ`).
+ - So let's figure out the probability distribution `P(x|g)`. This is the distribution of data points in each group. If we know the **distribution of x in each Grp: `P(x|g)`**, we can classify the new p-dimensional data points given in the future...so done and dusted. What if choosing the Grp_feature distribution `P(x|g)` as **multivariate Gaussian** ? (Of course, in the multivariate version, `µ` is a mean vector and σ is replaced by a covariance matrix `Σ`).
  <img src="https://user-images.githubusercontent.com/31917400/52270233-3d9b3500-2938-11e9-9585-63ef137328a4.jpg" />
 
 # two functions to maximize `P(g|x)`.
