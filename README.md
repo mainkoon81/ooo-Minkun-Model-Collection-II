@@ -62,7 +62,7 @@ Since **discriminative** cares `P(Y|X)` only, while **generative** cares `P(X,Y)
    <img src="https://user-images.githubusercontent.com/31917400/52282688-e6f22300-2958-11e9-923a-5be3e22e8de9.jpg" />
 
 ### 2. Latent Dirichlet Allocation
- - LDA is a “generative probabilistic model” of a collection of **composites made up of parts**. In terms of topic modeling, the composites are `documents` and the parts are `words`. 
+ - LDA is a “generative probabilistic model” of a collection of **composites made up of parts**.  The composites are `documents` and the parts are `words` in terms of topic(LatentVariable) modeling. 
  - The probabilistic topic model estimated by LDA consists of two tables (matrices):
    - 1st table: the probability of selecting a particular `part(word)` when sampling a particular **topic(category)**.
    - 2nd table: the probability of selecting a particular **topic(category)** when sampling a particular `document`.
