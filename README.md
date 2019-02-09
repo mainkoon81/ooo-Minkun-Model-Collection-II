@@ -69,7 +69,10 @@ Since **discriminative** cares `P(Y|X)` only, while **generative** cares `P(X,Y)
    - 2nd table: the probability of selecting a particular **topic(category)** when sampling a particular `document`.
 <img src="https://user-images.githubusercontent.com/31917400/52525957-842abf80-2ca9-11e9-8465-b36a9e1d2d4e.jpg" />
 
- - WTF?
+ - > In the chart above, every topic is given the same alpha value. Each dot represents some distribution or mixture of the three topics like (1.0, 0.0, 0.0) or (0.4, 0.3, 0.3). Remember that each sample has to add up to one. At low alpha values (less than one), most of the topic distribution samples are in the corners (near the topics). For really low alpha values, it’s likely you’ll end up sampling (1.0, 0.0, 0.0), (0.0, 1.0, 0.0), or (0.0, 0.0, 1.0). This would mean that a document would only ever have one topic if we were building a three topic probabilistic topic model from scratch.
+ - > At alpha equal to one, any space on the surface of the triangle (2-simplex) is fair game (uniformly distributed). You could equally likely end up with a sample favoring only one topic, a sample that gives an even mixture of all the topics, or something in between. For alpha values greater than one, the samples start to congregate to the center. This means that as alpha gets bigger, your samples will more likely be uniform or an even mixture of all the topics.
+ 
+ - WTF? __Simplest Generative Procedure:__
    - Pick your unique set of WORDS.
    - Pick how many DOCUMENTS you want.
    - Pick how many WORDS you want per each DOCUMENT (sample from a Poisson distribution).
@@ -77,10 +80,10 @@ Since **discriminative** cares `P(Y|X)` only, while **generative** cares `P(X,Y)
    - Pick a number between not zero and positive infinity and call it **alpha**.
    - Pick a number between not zero and positive infinity and call it **beta**.
    - Build the `**WORDS** VS **topics** table`. 
-     - For each column, draw a sample(spin the wheel) from a Dirichlet distribution using **beta** as the input. 
+     - For each column, draw a sample(spin the wheel) from a Dirichlet distribution using **beta** as the input. The Dirichlet distribution takes a number called **beta** for each `topic` (or category). 
      - Each sample will fill out each column in the table, sum to one, and give the probability of each part per `topic`(column).
    - Build the `**DOCUMENTS** VS **topics** table`. 
-     - For each row, draw a sample from a Dirichlet distribution using **alpha** as the input. 
+     - For each row, draw a sample from a Dirichlet distribution using **alpha** as the input. The Dirichlet distribution takes a number called alpha for each `topic` (or category).
      - Each sample will fill out each row in the table, sum to one, and give the probability of each `topic` (column) per DOCUMENT.
    - Build the actual DOCUMENTS. For each DOCUMENT:
      - Step_1) look up its **row** in the `**DOCUMENT** VS **topics** table`, 
