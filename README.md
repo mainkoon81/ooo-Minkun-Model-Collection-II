@@ -82,7 +82,7 @@ Since **discriminative** cares `P(Y|X)` only, while **generative** cares `P(X,Y)
    - Build the `**DOCUMENTS** VS **topics** table`. 
      - For each row, draw a sample from a Dirichlet distribution using **alpha** as the input. 
      - Each sample will fill out each row in the table, sum to one, and give the probability of each `topic` (column) per DOCUMENT.
-   - Build the actual composites. For each DOCUMENT, 
+   - Build the actual DOCUMENTS. For each DOCUMENT:
      - Step_1) look up its **row** in the `**DOCUMENT** VS **topics** table`, 
      - Step_2) sample a `topic` based on the probabilities in the row, 
      - Step_3) go to the `**WORDS** VS **topics** table`, 
