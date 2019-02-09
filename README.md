@@ -69,21 +69,26 @@ Since **discriminative** cares `P(Y|X)` only, while **generative** cares `P(X,Y)
    - 2nd table: the probability of selecting a particular **topic(category)** when sampling a particular `document`.
 <img src="https://user-images.githubusercontent.com/31917400/52525957-842abf80-2ca9-11e9-8465-b36a9e1d2d4e.jpg" />
 
- - Pick your unique set of parts.
-   - Pick how many composites you want.
-   - Pick how many parts you want per each composite (sample from a Poisson distribution).
-   - Pick how many topics (categories) you want.
-   - Pick a number between not zero and positive infinity and call it alpha.
-   - Pick a number between not zero and positive infinity and call it beta.
-   - Build the parts versus the topics table. For each column, draw a sample (spin the wheel) from a Dirichlet distribution (a distribution of distributions) using beta as the input. Each sample will fill out each column in the table, sum to one, and give the probability of each part per topic (column).
-   - Build the composites versus the topics table. For each row, draw a sample from a Dirichlet distribution using alpha as the input. Each sample will fill out each row in the table, sum to one, and give the probability of each topic (column) per composite.
-   - Build the actual composites. For each composite, 
-     - 1) look up its row in the composites versus topics table, 
-     - 2) sample a topic based on the probabilities in the row, 
-     - 3) go to the parts versus topics table, 
-     - 4) look up the topic sampled, 
-     - 5) sample a part based on the probabilities in the column, 
-     - 6) repeat from step 2 until you’ve reached how many parts this composite was set to have.
+ - WTF?
+   - Pick your unique set of WORDS.
+   - Pick how many DOCUMENTS you want.
+   - Pick how many WORDS you want per each DOCUMENT (sample from a Poisson distribution).
+   - Pick how many `topics`(categories) you want.
+   - Pick a number between not zero and positive infinity and call it **alpha**.
+   - Pick a number between not zero and positive infinity and call it **beta**.
+   - Build the `**WORDS** VS **topics** table`. 
+     - For each column, draw a sample(spin the wheel) from a Dirichlet distribution using **beta** as the input. 
+     - Each sample will fill out each column in the table, sum to one, and give the probability of each part per `topic`(column).
+   - Build the `**DOCUMENTS** VS **topics** table`. 
+     - For each row, draw a sample from a Dirichlet distribution using **alpha** as the input. 
+     - Each sample will fill out each row in the table, sum to one, and give the probability of each `topic` (column) per DOCUMENT.
+   - Build the actual composites. For each DOCUMENT, 
+     - Step_1) look up its **row** in the `**DOCUMENT** VS **topics** table`, 
+     - Step_2) sample a `topic` based on the probabilities in the row, 
+     - Step_3) go to the `**WORDS** VS **topics** table`, 
+     - Step_4) look up the `topic` sampled, 
+     - Step_5) sample a **WORD** based on the probabilities in the column, 
+     - Step_6) repeat from step 2 until you’ve reached how many WORDS this DOCUMENT was set to have.
 
 
 
