@@ -7,6 +7,9 @@
    - Markov networks
 
 ### Bayesian Network
+<img src="https://user-images.githubusercontent.com/31917400/52652533-2afb9f80-2ee6-11e9-9db7-5d758aa72710.png" />
+
+It uses a `directed graph` as the intrinsic representation. 
 
 
 
@@ -20,7 +23,7 @@
 
 
 ---------------------------------------------------------------------------------------------
-# Generative VS Discriminative
+# Generative VS Discriminative Model
  - Generative algorithm: learning each structure, and then classifying it using the knowledge you just gained
  - Discriminative algorithm: determining the difference in the each without learning the structure, and then classifying the data_point.
 <img src="https://user-images.githubusercontent.com/31917400/52206132-3a894180-2871-11e9-8cdd-81ac93c74e1d.jpg" />
