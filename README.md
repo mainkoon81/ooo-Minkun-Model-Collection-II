@@ -16,7 +16,7 @@ Depending on whether the graph is **directed or undirected**, we can classify gr
 <img src="https://user-images.githubusercontent.com/31917400/52657674-18d32e80-2ef1-11e9-8102-e5b5977b0752.jpg" />
 
 ### 1> Bayesian Network
-<img src="https://user-images.githubusercontent.com/31917400/52653420-dc4f0500-2ee7-11e9-8424-3a893ea50547.png" />
+<img src="https://user-images.githubusercontent.com/31917400/52668629-f6024380-2f0b-11e9-937a-3985d819d3d7.png" />
 
 It uses a `directed graph` as the intrinsic representation. 
 
