@@ -94,7 +94,13 @@ Since **discriminative** cares `P(Y|X)` only, while **generative** cares `P(X,Y)
      - Step_6) repeat from step 2 until you’ve reached how many WORDS this DOCUMENT was set to have.
 
 
-
+### Dirichlet Processes
+ - Goal
+   - Density Estimation
+   - Semi-parametric modelling
+   - Sidestepping model selection/averaging
+ 
+ 
 
 
 
