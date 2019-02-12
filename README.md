@@ -7,14 +7,7 @@
    - Markov networks
 
 ### Bayesian Network
-<img src="https://user-images.githubusercontent.com/31917400/52652533-2afb9f80-2ee6-11e9-9db7-5d758aa72710.png" />
-
-This graph describes a __setting for a student__ enrolled in the university. 
- - X1. __Difficulty__ (of the class): 0 (low difficulty) and 1 (high difficulty)
- - X2. __Intelligence__ (of the student): 0 (not intelligent) and 1 (intelligent)
- - X3. __Grade__ (the student gets in the class): 1 (good grade), 2 (average grade), and 3 (bad grade)
- - X4. __SAT__ (student’s score in the SAT exam): 0 (low score) and 1 (high score)
- - X5. __Letter__ (quality of recommendation letter the student would get from the professor after completing the course): 0 (not a good letter) and 1 (a good letter)
+<img src="https://user-images.githubusercontent.com/31917400/52653420-dc4f0500-2ee7-11e9-8424-3a893ea50547.png" />
 
 It uses a `directed graph` as the intrinsic representation. 
 
