@@ -1,9 +1,12 @@
 # Probabilistic Graphic Model
  - It's a probabilistic model for which a graph expresses the **conditional dependence structure** between random variables.
-   - Let's say we want to classify data points that are independent of each other(for example, given an image, predict whether it contains a cat or a dog), but See `I like machine learning`...Problem here is that `learning` could be a noun or a verb depending on its context. Probabilistic graphical model is a powerful framework which can be used to learn such models with dependency. 
- 
- 
- - Bayesian Network
+   - Let's say we want to classify data points that are independent of each other(for example, given an image, predict whether it contains a cat or a dog), but See `I`, `like`, `machine`, `learning`... Problem here is that `learning` could be a noun or a verb depending on its context. Probabilistic graphical model is a powerful framework which can be used to learn such models with **dependency**.
+   - PGM consists of a graph structure. Each `node` of the graph is associated with a random variable, and the `edge` in the graph are used to encode relations between the random variables.
+ - Depending on whether the graph is **directed or undirected**, we can classify graphical modes into two categories
+   - Bayesian networks
+   - Markov networks
+
+### Bayesian Network
 
 
 
