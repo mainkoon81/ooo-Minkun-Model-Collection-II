@@ -21,6 +21,17 @@ Depending on whether the graph is **directed or undirected**, we can classify gr
 It uses a `directed graph` as the intrinsic representation. 
 
 
+
+
+
+
+
+
+
+
+
+
+
 ### 2> Markov Network
 
 It uses a `undirected graph` as the intrinsic representation. 
