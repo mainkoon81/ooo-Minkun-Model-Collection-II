@@ -7,18 +7,21 @@ It's a probabilistic model for which a graph expresses the **conditional depende
    - It gives us an intuitive and compact data structure for capturing **high dimensional probability distributions**. 
    - It gives us a suite of methods for **efficient reasoning**, using general purpose algorithms.
    - It gives us a reduction in the number of parameters thus we can represent these high-dimensional probability distribution efficiently using a very small number of parameters. 
+     - By hand: feasible elicitation
+     - Automatically: learning from data
    
 Depending on whether the graph is **directed or undirected**, we can classify graphical modes into two categories.
  - Bayesian networks
  - Markov networks
+<img src="https://user-images.githubusercontent.com/31917400/52657674-18d32e80-2ef1-11e9-8102-e5b5977b0752.jpg" />
 
-### 1.Bayesian Network
+### 1> Bayesian Network
 <img src="https://user-images.githubusercontent.com/31917400/52653420-dc4f0500-2ee7-11e9-8424-3a893ea50547.png" />
 
 It uses a `directed graph` as the intrinsic representation. 
 
 
-### 2.Markov Network
+### 2> Markov Network
 
 It uses a `undirected graph` as the intrinsic representation. 
 
