@@ -3,19 +3,22 @@
 
 It's a probabilistic model for which a graph expresses the **conditional dependence structure** between random variables.
  - Let's say we want to classify data points that are independent of each other(for example, given an image, predict whether it contains a cat or a dog), but See `I`, `like`, `machine`, `learning`... Problem here is that `learning` could be a noun or a verb depending on its context. Probabilistic graphical model is a powerful framework which can be used to learn such models with **dependency**.
- - PGM consists of a graph structure. Each `node` of the graph is associated with a **random variable**, and the `edge` in the graph are used to encode **relations** between the random variables. It gives us an intuitive and compact data structure for capturing **high dimensional probability distributions**. 
-
+ - PGM consists of a graph structure. Each `node` of the graph is associated with a **random variable**, and the `edge` in the graph are used to encode **relations** between the random variables. Because of the way the graph structure encodes the `parameterization` of the probability distribution,
+   - It gives us an intuitive and compact data structure for capturing **high dimensional probability distributions**. 
+   - It gives us a suite of methods for **efficient reasoning**, using general purpose algorithms.
+   - It gives us a reduction in the number of parameters thus we can represent these high-dimensional probability distribution efficiently using a very small number of parameters. 
+   
 Depending on whether the graph is **directed or undirected**, we can classify graphical modes into two categories.
  - Bayesian networks
  - Markov networks
 
-### Bayesian Network
+### 1.Bayesian Network
 <img src="https://user-images.githubusercontent.com/31917400/52653420-dc4f0500-2ee7-11e9-8424-3a893ea50547.png" />
 
 It uses a `directed graph` as the intrinsic representation. 
 
 
-### Markov Network
+### 2.Markov Network
 
 It uses a `undirected graph` as the intrinsic representation. 
 
