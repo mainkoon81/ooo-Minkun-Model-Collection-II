@@ -1,3 +1,22 @@
+# Probabilistic Graphic Model
+ - It's a probabilistic model for which a graph expresses the **conditional dependence structure** between random variables.
+   - Let's say we want to classify data points that are independent of each other(for example, given an image, predict whether it contains a cat or a dog), but See `I like machine learning`...Problem here is that `learning` could be a noun or a verb depending on its context. Probabilistic graphical model is a powerful framework which can be used to learn such models with dependency. 
+ 
+ 
+ - Bayesian Network
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------------------------------
 # Generative VS Discriminative
  - Generative algorithm: learning each structure, and then classifying it using the knowledge you just gained
  - Discriminative algorithm: determining the difference in the each without learning the structure, and then classifying the data_point.
