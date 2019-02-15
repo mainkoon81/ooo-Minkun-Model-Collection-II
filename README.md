@@ -21,7 +21,8 @@ Depending on whether the graph is **directed or undirected**, we can classify gr
 
 It uses a `directed graph` as the intrinsic representation. Bayesian Network is a Directed Acyclic Graph(DAG) whose nodes represent the random variables X1, X2, ... It represents a `joint distribution`(via the chainRule) for Bayesian Networks.  
 
-> Template Model for Bayesian Networks
+> Template Model:
+
 As an extension on the language on graphical models, **TemplateModel** intends to deal with the very large class of cases. 
  - Template Variable: it is the variables that we end up replicating in many cases again and again within a single model as well as across models. Template model is the dependency models from template variables.  
  - **Template models** can often capture events that occur in a time series. 
@@ -38,7 +39,7 @@ For example,
 
 How do you represent the dependency model over that ensemble in a coherent way?
 
-> Temporal Model
+> Temporal Model:
 
 
 
