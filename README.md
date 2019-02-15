@@ -15,6 +15,7 @@ Depending on whether the graph is **directed or undirected**, we can classify gr
  - Markov networks
 <img src="https://user-images.githubusercontent.com/31917400/52657674-18d32e80-2ef1-11e9-8102-e5b5977b0752.jpg" />
 
+## A. Representation
 ### 1> Bayesian Network
 <img src="https://user-images.githubusercontent.com/31917400/52790734-36bea180-305f-11e9-83b4-d831b3ac13eb.png" />
 
@@ -59,6 +60,9 @@ It uses a `undirected graph` as the intrinsic representation.
 
 
 
+## B. Inference
+
+## C. 
 ---------------------------------------------------------------------------------------------
 # Generative VS Discriminative Model
  - Generative algorithm: learning each structure, and then classifying it using the knowledge you just gained
