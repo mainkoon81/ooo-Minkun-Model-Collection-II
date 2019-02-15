@@ -21,8 +21,7 @@ Depending on whether the graph is **directed or undirected**, we can classify gr
 
 It uses a `directed graph` as the intrinsic representation. Bayesian Network is a Directed Acyclic Graph(DAG) whose nodes represent the random variables X1, X2, ... It represents a `joint distribution`(via the chainRule) for Bayesian Networks.  
 
-> Template Model:
-
+### [Template Model]:
 As an extension on the language on graphical models, **TemplateModel** intends to deal with the very large class of cases. 
  - Template Variable: it is the variables that we end up replicating in many cases again and again within a single model as well as across models. Template model is the dependency models from template variables.  
  - **Template models** can often capture events that occur in a time series. 
@@ -32,15 +31,22 @@ As an extension on the language on graphical models, **TemplateModel** intends t
 <img src="https://user-images.githubusercontent.com/31917400/52852977-071ca180-3112-11e9-8928-f44a07c0f347.jpg" />
 
 For example,
- - Dynamic Bayesian Network: to deal with temporal processes where we have replication over time.
+ - Dynamic Bayesian Network(DBN): to deal with temporal processes where we have replication over time.
  - Object Relational Model:
    - Directed: Bayesian Network
    - Undirected: Markov Network
 
 How do you represent the dependency model over that ensemble in a coherent way?
 
-> Temporal Model:
+> Temporal Model(DBN) with TimeSeries:
+ - Template Model incorporates multiple copies of the same variable thus allows us to represent multiple models within a single representation.
+ - Plus, this system evolves over time - Dynamic Bayesian Network
+ 
+> Temporal Model(HMM):
+ - Although Hidden Markov Models can be viewed as a subclass of dynamic Bayesian networks, they have their own type of structure that makes them particularly useful for a broad range of applications.
 
+> Plate Model:
+ - 
 
 
 
