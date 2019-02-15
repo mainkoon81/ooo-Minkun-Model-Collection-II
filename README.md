@@ -46,7 +46,13 @@ How do you represent the dependency model over that ensemble in a coherent way?
  - Although Hidden Markov Models can be viewed as a subclass of dynamic Bayesian networks, they have their own type of structure that makes them particularly useful for a broad range of applications.
 
 > Plate Model:
- - 
+ - Model the repeatition! If we toss the same coin again and again, how to model this repeatition? 
+   - put a little box around that outcome variable, and this box which is called a plate(whyyy? coz it's a stack of identical pieces). A plate denotes that the outcome variable is **indexed**. 
+   - sometimes in many models, we will include all parameters explicitly within the model. But often when you have a parameter that's outside of all plates, we won't denote it explicitly. So we just omit it.
+<img src="https://user-images.githubusercontent.com/31917400/52870574-11ee2b00-3140-11e9-9ac1-a8ce07c4bb91.jpg" />
+   
+
+
 
 
 
