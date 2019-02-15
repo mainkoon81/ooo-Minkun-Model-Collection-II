@@ -38,6 +38,7 @@ For example,
 
 How do you represent the dependency model over that ensemble in a coherent way?
 
+## Global Structure
 > Temporal Model(DBN) with TimeSeries:
  - Template Model incorporates multiple copies of the same variable thus allows us to represent multiple models within a single representation.
  - Plus, this system evolves over time - Dynamic Bayesian Network
@@ -60,6 +61,8 @@ How do you represent the dependency model over that ensemble in a coherent way?
    
    - From the ground network above, we can see that A and B belong only to plate x, C belongs to x and y, D belongs to x and z and E belongs to all 3. Moreover, there needs to be a direct edge from A to E.
    - These models, by allowing us to represent an intricate network of dependencies, allow us to capture very richly correlated structures in a concise way which allows collective inference. These models can encode correlations across multiple objects allowing collective inference. 
+
+## Local Structure
 
 
 
