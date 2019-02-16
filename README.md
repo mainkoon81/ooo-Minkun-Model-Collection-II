@@ -65,7 +65,7 @@ How do you represent the dependency model over that ensemble in a coherent way?
 ## Local Structure
 <img src="https://user-images.githubusercontent.com/31917400/52900377-03aa1880-31ed-11e9-8100-4386992ee220.jpg" />
 
-There are several structures within Conditional Probability Distribution.
+There are several structures within Conditional Probability Distribution. We want to reduce the parameter size...but HOW? 
  - a)Deterministic Structure
  - b)Tree Structure
  - c)Logistic Structure
@@ -95,12 +95,17 @@ There are several structures within Conditional Probability Distribution.
 <img src="https://user-images.githubusercontent.com/31917400/52904371-4e468780-3223-11e9-8c78-c72c7ab90c28.jpg" />
 
  - What if there are so many factors that contribute something to the probability of exhibiting phenomenon? 
- - **Noisy OR model** can capture such interaction. 
+ - **Noisy-OR model** can capture such interaction. 
    - It is a larger graphical model where we break down the dependencies of Y on its parents (X1 up to Xk), by introducing a bunch of `intervening variables`. They are noisy transmitters or filters. So Y becomes true only if these filters succeeds in making it true. 
    - Then what is the probability that all of these **Z**guys fail to turn on the variable Y? So, when does y fail to get turned on?
-     - First of all, when it doesn't get turned on by the `leak`. So, that's one minus lambda zero, times the probability that none of Z causes Y get on.
+     - First of all, when it doesn't get turned on by the `leak`. So, that's one minus lambda zero x the probability that none of Z causes Y turned on.
    <img src="https://user-images.githubusercontent.com/31917400/52904648-b9de2400-3226-11e9-8a9d-7dee3fabeaa2.jpg" />
    
+ - **Noisy-AND model** can capture such interaction.
+   - This is called independence of causal influence because it assumes that you have a bunch of causes and each of them acts independently to affect the truth of that child variable. so, there's no interactions between the different causes.
+   - Each `Zi` have their own separate mechanism and ultimately it's all aggregated together in a single variable `Z` from which the truth of Y is then determined from this aggregate effect.  
+   <img src="https://user-images.githubusercontent.com/31917400/52904801-f874de00-3228-11e9-99cc-56067beca889.jpg" />
+
 > d) Logistic Structure
 
 
