@@ -97,7 +97,9 @@ There are several structures within Conditional Probability Distribution.
  - What if there are so many factors that contribute something to the probability of exhibiting phenomenon? 
  - **Noisy OR model** can capture such interaction. 
    - It is a larger graphical model where we break down the dependencies of Y on its parents (X1 up to Xk), by introducing a bunch of `intervening variables`. They are noisy transmitters or filters. So Y becomes true only if these filters succeeds in making it true. 
-   
+   - Then what is the probability that all of these **Z**guys fail to turn on the variable Y? So, when does y fail to get turned on?
+     - First of all, when it doesn't get turned on by the `leak`. So, that's one minus lambda zero, times the probability that none of Z causes Y get on.
+   <img src="https://user-images.githubusercontent.com/31917400/52904648-b9de2400-3226-11e9-8a9d-7dee3fabeaa2.jpg" />
    
 > d) Logistic Structure
 
