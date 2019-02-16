@@ -82,6 +82,7 @@ There are several structures within Conditional Probability Distribution.
 <img src="https://user-images.githubusercontent.com/31917400/52902425-6c52be80-3208-11e9-8f57-130d90e55ef1.jpg" />
 
  - Context-Specific Independent tree
+   - The independent statement b/w two variable(X,Y) only holds for particular values of the **conditioning variable C**. So the dependence only happening in a certain context.
  - Non-Context-Specific Independent tree (Multiplexer Model)
    - Multiplexer activates the `V-structure`. This will dramatically reduce the size of parameters.  
 <img src="https://user-images.githubusercontent.com/31917400/52902687-1c75f680-320c-11e9-9b0d-ca8af4f6ca8f.jpg" />
