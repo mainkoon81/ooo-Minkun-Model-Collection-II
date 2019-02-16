@@ -83,7 +83,7 @@ There are several structures within Conditional Probability Distribution.
 
  - Context-Specific Independent tree
  - Non-Context-Specific Independent tree (Multiplexer Model)
-   - Multiplexer activates the `V-structure`. 
+   - Multiplexer activates the `V-structure`. This will dramatically reduce the size of parameters.  
 <img src="https://user-images.githubusercontent.com/31917400/52902687-1c75f680-320c-11e9-9b0d-ca8af4f6ca8f.jpg" />
 
    - Application
