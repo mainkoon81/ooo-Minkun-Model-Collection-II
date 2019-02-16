@@ -72,12 +72,16 @@ How do you represent the dependency model over that ensemble in a coherent way?
  - Noise(Or/And) Structure
  - Continuous Structure
 
-> Deterministic Structure(Context Specific Independency)
- - The independent statement b/w two variable(X,Y) only holds for particular values of the **conditioning variable C**. 
- <img src="https://user-images.githubusercontent.com/31917400/52900959-f98c1800-31f4-11e9-8daa-67710a994fa0.jpg" />
+> Deterministic Structure
+<img src="https://user-images.githubusercontent.com/31917400/52900959-f98c1800-31f4-11e9-8daa-67710a994fa0.jpg" />
+
+ - Context-Specific Independent model
+   - The independent statement b/w two variable(X,Y) only holds for particular values of the **conditioning variable C**. So the dependence only happening in a certain context. 
 
 > Tree Structure
 
+ - Context-Specific Independent tree
+ - Non-Contex- Specific Independent tree(Multiplexer Model)
 
 
 
