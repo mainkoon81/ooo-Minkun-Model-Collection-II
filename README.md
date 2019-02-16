@@ -69,7 +69,7 @@ There are several structures within Conditional Probability Distribution.
  - a)Deterministic Structure
  - b)Tree Structure
  - c)Logistic Structure
- - d)Noise(Or/And) Structure
+ - d)Noisy(Or/And) Structure
  - e)Continuous Structure
 
 > a) Deterministic Structure
@@ -91,8 +91,13 @@ There are several structures within Conditional Probability Distribution.
      - The Multiplexer Tree is very useful! It comes up in physical hardware configuration settings. It turns out that all of the troubleshooters that are part of the Microsoft operating system are, Built on top of a Bayesian Network Technology. The task is to try and figure out **why a printer isn't printing**. So we have a variable here that tells us whether the printer is producing output, and that depends on a variety of factors, but one of the factors that it depends on is where the printer input is coming from: `Is it coming from a local transport? Or a network transport?`. And, depending on which of those it's coming from, there's a different set of failures that might occur. So the variable here that serves the goal of the **selector(Multiplexer) variable** is this variable `print data out`. And that's the root of the tree that's used here. And and depending on whether the print location is local or not. then you depend either on properties of the local transport. Or on properties of the network transport. And it turns out that even in this very, very simple network, the use of tree CPD's `reduces the number of parameters` from 145 to about 55, and makes the elicitation process much easier. 
      <img src="https://user-images.githubusercontent.com/31917400/52902788-978bdc80-320d-11e9-935b-691a91a1e2a2.jpg" />
 
-# > c) Noise(Or/And) Structure       
- -      
+> c) Noisy(Or/And) Structure
+<img src="https://user-images.githubusercontent.com/31917400/52904371-4e468780-3223-11e9-8c78-c72c7ab90c28.jpg" />
+
+ - What if there are so many factors that contribute something to the probability of exhibiting phenomenon? 
+ - **Noisy OR model** can capture such interaction. 
+   - It is a larger graphical model where we break down the dependencies of Y on its parents (X1 up to Xk), by introducing a bunch of `intervening variables`. They are noisy transmitters or filters. So Y becomes true only if these filters succeeds in making it true. 
+   
    
 > d) Logistic Structure
 
