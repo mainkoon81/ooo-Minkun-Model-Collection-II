@@ -65,7 +65,7 @@ How do you represent the dependency model over that ensemble in a coherent way?
 ## Local Structure
 <img src="https://user-images.githubusercontent.com/31917400/52900377-03aa1880-31ed-11e9-8100-4386992ee220.jpg" />
 
-There are several structures within Conditional Probability Distribution. We want to reduce the parameter size...but HOW? 
+There are several structures in a parametric form within Conditional Probability Distribution. We hope to reduce the parameter size...but HOW? 
  - a)Deterministic Structure
  - b)Tree Structure
  - c)Logistic Structure
@@ -118,7 +118,11 @@ There are several structures within Conditional Probability Distribution. We wan
    - Since **e to the power of `Z`** is a positive number, this gives us a number that is always in the interval of {0,1}.
 
 > e) Continuous Structure
+<img src="https://user-images.githubusercontent.com/31917400/52906319-31b94800-3241-11e9-80b0-3e7b2fd646bf.jpg" />
 
+ - When our network involves continuous variable..
+ - 
+ <img src="https://user-images.githubusercontent.com/31917400/52906349-c7ed6e00-3241-11e9-8859-d0ac04e8257d.jpg" />
 
 
 
