@@ -65,8 +65,18 @@ How do you represent the dependency model over that ensemble in a coherent way?
 ## Local Structure
 <img src="https://user-images.githubusercontent.com/31917400/52900377-03aa1880-31ed-11e9-8100-4386992ee220.jpg" />
 
+#### Structure within Conditional Probability Distribution
+ - Deterministic Structure
+ - Tree Structure
+ - Logistic Structure
+ - Noise(Or/And) Structure
+ - Continuous Structure
 
+> Deterministic Structure(Context Specific Independency)
+ - The independent statement b/w two variable(X,Y) only holds for particular values of the **conditioning variable C**. 
+ <img src="https://user-images.githubusercontent.com/31917400/52900959-f98c1800-31f4-11e9-8daa-67710a994fa0.jpg" />
 
+> Tree Structure
 
 
 
