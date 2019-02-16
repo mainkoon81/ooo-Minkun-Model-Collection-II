@@ -107,6 +107,7 @@ There are several structures within Conditional Probability Distribution. We wan
    <img src="https://user-images.githubusercontent.com/31917400/52904801-f874de00-3228-11e9-99cc-56067beca889.jpg" />
 
 > d) Logistic Structure
+<img src="https://user-images.githubusercontent.com/31917400/52904828-6e794500-3229-11e9-9e37-aca824bc0268.jpg" />
 
 
 > e) Continuous Structure
