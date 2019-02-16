@@ -65,20 +65,21 @@ How do you represent the dependency model over that ensemble in a coherent way?
 ## Local Structure
 <img src="https://user-images.githubusercontent.com/31917400/52900377-03aa1880-31ed-11e9-8100-4386992ee220.jpg" />
 
-> Structure within Conditional Probability Distribution
- - Deterministic Structure
- - Tree Structure
- - Logistic Structure
- - Noise(Or/And) Structure
- - Continuous Structure
+There are several structures within Conditional Probability Distribution.
+ - a)Deterministic Structure
+ - b)Tree Structure
+ - c)ogistic Structure
+ - d)Noise(Or/And) Structure
+ - e)Continuous Structure
 
-> Deterministic Structure
+> a) Deterministic Structure
 <img src="https://user-images.githubusercontent.com/31917400/52900959-f98c1800-31f4-11e9-8daa-67710a994fa0.jpg" />
 
  - Context-Specific Independent model
    - The independent statement b/w two variable(X,Y) only holds for particular values of the **conditioning variable C**. So the dependence only happening in a certain context. 
 
-> Tree Structure
+> b) Tree Structure
+<img src="https://user-images.githubusercontent.com/31917400/52902425-6c52be80-3208-11e9-8f57-130d90e55ef1.jpg" />
 
  - Context-Specific Independent tree
  - Non-Contex- Specific Independent tree(Multiplexer Model)
