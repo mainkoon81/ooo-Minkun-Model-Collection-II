@@ -75,14 +75,16 @@ There are several structures within Conditional Probability Distribution.
 > a) Deterministic Structure
 <img src="https://user-images.githubusercontent.com/31917400/52900959-f98c1800-31f4-11e9-8daa-67710a994fa0.jpg" />
 
- - Context-Specific Independent model
+ - Context-Specific Independent structure
    - The independent statement b/w two variable(X,Y) only holds for particular values of the **conditioning variable C**. So the dependence only happening in a certain context. 
 
 > b) Tree Structure
 <img src="https://user-images.githubusercontent.com/31917400/52902425-6c52be80-3208-11e9-8f57-130d90e55ef1.jpg" />
 
  - Context-Specific Independent tree
- - Non-Contex- Specific Independent tree(Multiplexer Model)
+ - Non-Context-Specific Independent tree (Multiplexer Model)
+   - Multiplexer activates the `V-structure`. 
+<img src="https://user-images.githubusercontent.com/31917400/52902687-1c75f680-320c-11e9-9b0d-ca8af4f6ca8f.jpg" />
 
 
 
