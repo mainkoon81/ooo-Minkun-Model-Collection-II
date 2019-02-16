@@ -1,4 +1,4 @@
-# Probabilistic Graphic Model
+# Probabilistic Graphical Model
 <img src="https://user-images.githubusercontent.com/31917400/52655869-1a025c80-2eed-11e9-82ba-1fdea931596f.jpg" />
 
 It's a probabilistic model for which a graph expresses the **conditional dependence structure** between random variables.
@@ -109,6 +109,9 @@ There are several structures within Conditional Probability Distribution. We wan
 > d) Logistic Structure
 <img src="https://user-images.githubusercontent.com/31917400/52904828-6e794500-3229-11e9-9e37-aca824bc0268.jpg" />
 
+ - 
+ 
+ 
 
 > e) Continuous Structure
 
