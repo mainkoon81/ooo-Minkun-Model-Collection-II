@@ -109,9 +109,13 @@ There are several structures within Conditional Probability Distribution. We wan
 > d) Logistic Structure
 <img src="https://user-images.githubusercontent.com/31917400/52904828-6e794500-3229-11e9-9e37-aca824bc0268.jpg" />
 
- - 
- 
- 
+ - In a sigmoid CPD, each discrete **Xi** induces a continuous `Zi` which represents `Wi*Xi`. 
+ - `Wi` parameterizes this edge and tells us how much force **Xi** is going to exert on **making Y true** so, if `Wi` is zero, it tells us that **Xi** exerts no influence whatsoever. 
+   - (+) `Wi`: **Xi** is going to make Y more likely to be true 
+   - (-) `Wi`: **Xi** is going to make Y less likely to be true. 
+ - the final `Z` adds up all of these different influences + **an additional bias term `W0`**. 
+ - Then we turn this ultimately into the probability of the **target variable Y** by passing this continuous quantity `Z` through a Sigmoid Function(squelching func). 
+   - Since **e to the power of `Z`** is a positive number, this gives us a number that is always in the interval of {0,1}.
 
 > e) Continuous Structure
 
