@@ -86,6 +86,14 @@ There are several structures within Conditional Probability Distribution.
    - Multiplexer activates the `V-structure`. 
 <img src="https://user-images.githubusercontent.com/31917400/52902687-1c75f680-320c-11e9-9b0d-ca8af4f6ca8f.jpg" />
 
+   - Application
+     - registration or correspondence or data association problems.
+     - comes up in physical hardware configuration settings. So this is an actual, example from a troubleshooter, for printers used at Microsoft. And it turns out that all of the troubleshooters that are part of the Microsoft operating system are, Built on top of a Bayesian Network Technology. the task is to try and figure out why a printer isn't printing. So we have a variable here that tells us whether the printer is producing output, and, that depends on a variety of factors, but one of the factors that it depends on is where the printer input is coming from. Is it coming from a local transport? Or a network transport. And, depending on which of those it's coming from, there's a different set of failures that might occur. So the variable here that serves the goal of the selector variable is this variable print data out. And that's the root of the tree that's used here. And and depending on whether the print location is local or not. then you depend either on properties of the local transport. Or on properties of the network transport. And it turns out that even in this very, very simple network, the use of tree CPD's reduces the number of parameters from 145 to about 55, and makes the elicitation process much easier. 
+     <img src="https://user-images.githubusercontent.com/31917400/52902788-978bdc80-320d-11e9-935b-691a91a1e2a2.jpg" />
+
+     
+     
+     
 
 
 
