@@ -65,7 +65,7 @@ How do you represent the dependency model over that ensemble in a coherent way?
 ## Local Structure
 <img src="https://user-images.githubusercontent.com/31917400/52900377-03aa1880-31ed-11e9-8100-4386992ee220.jpg" />
 
-#### Structure within Conditional Probability Distribution
+> Structure within Conditional Probability Distribution
  - Deterministic Structure
  - Tree Structure
  - Logistic Structure
