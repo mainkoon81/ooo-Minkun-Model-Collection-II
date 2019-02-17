@@ -144,6 +144,10 @@ It uses a `undirected graph` as the intrinsic representation.
 
 ---------------------------------------------------------------------------------------------
 # Generative VS Discriminative Model
+Machine Learning models can be typically divided into two types. Discriminative and Generative models. Discriminative models deal with classification or categorization of the data, examples include SVMs, linear/logistic regression, CRFs etc. Generative approaches model how the data is generated and various other tasks can be further addressed with this generative information, examples include HMMs, GMM, Boltzman machines. Deep learning models such as DBMs, Variational Auto-encoders are again generative models.
+
+If you are keen on studying generative models and delving deeper into them, I would say concepts and thorough knowledge on Probabilistic graphical models is essential. If your focus is on Discriminative models or planning to use deep learning as a blackbox then you can get away without PGM and its probably not very essential. But if you are planning for a research either in implicit or explicit generative models or especially deep generative models, then I strongly recommend PGM as a course. Its a valuable tool for sure.
+
  - Generative algorithm: learning each structure, and then classifying it using the knowledge you just gained
  - Discriminative algorithm: determining the difference in the each without learning the structure, and then classifying the data_point.
 <img src="https://user-images.githubusercontent.com/31917400/52206132-3a894180-2871-11e9-8cdd-81ac93c74e1d.jpg" />
