@@ -129,15 +129,19 @@ There are several structures in a parametric form within Conditional Probability
 It uses a `undirected graph` as the intrinsic representation. 
 
 
+## Global Structure
+
+
+## Local Structure
 
 
 
 
 
-
-
+---------------------------------------------------------------------------------------------------------
 # B. Inference
 
+---------------------------------------------------------------------------------------------------------
 # C. Learning
 
 
