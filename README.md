@@ -1,4 +1,7 @@
-# Probabilistic Graphical Model
+# Generative Models
+
+
+## Probabilistic Graphical Model
 <img src="https://user-images.githubusercontent.com/31917400/52655869-1a025c80-2eed-11e9-82ba-1fdea931596f.jpg" />
 
 It's a probabilistic model for which a graph expresses the **conditional dependence structure** between random variables.
