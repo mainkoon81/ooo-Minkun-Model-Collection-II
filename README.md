@@ -1,4 +1,27 @@
-# Generative Models
+# Generative VS Discriminative Model
+Machine Learning models can be typically divided into two types. Discriminative and Generative models. Discriminative models deal with classification or categorization of the data, examples include SVMs, linear/logistic regression, CRFs etc. Generative approaches model how the data is generated and various other tasks can be further addressed with this generative information, examples include HMMs, GMM, Boltzman machines. Deep learning models such as DBMs, Variational Auto-encoders are again generative models.
+
+If you are keen on studying generative models and delving deeper into them, I would say concepts and thorough knowledge on Probabilistic graphical models is essential. If your focus is on Discriminative models or planning to use deep learning as a blackbox then you can get away without PGM and its probably not very essential. But if you are planning for a research either in implicit or explicit generative models or especially deep generative models, then I strongly recommend PGM as a course. Its a valuable tool for sure.
+
+ - Generative algorithm: learning each structure, and then classifying it using the knowledge you just gained
+ - Discriminative algorithm: determining the difference in the each without learning the structure, and then classifying the data_point.
+<img src="https://user-images.githubusercontent.com/31917400/52206132-3a894180-2871-11e9-8cdd-81ac93c74e1d.jpg" />
+
+A generative algorithm models how the data was "generated", so you ask it "what's the likelihood this or that class generated this instance?" and pick the one with the **better probability**. A discriminative algorithm uses the data to create a decision boundary, so you ask it "what side of the decision boundary is this instance on?" So it doesn't create a model of how the data was generated, it makes a model of what it thinks the boundary between classes looks like.
+ - Estimate joint probability P(Y, X) = P(Y|X)P(X)
+ - Estimates not only probability of labels but also the features
+ - Once model is fit, can be used to generate data
+ - LDA, QDA, Naive Bayes, etc
+ - (-) Often works worse, particularly when assumptions are violated
+
+Since **discriminative** cares `P(Y|X)` only, while **generative** cares `P(X,Y) and P(X)` at the same time, in order to predict **P(Y|X)** well, the generative model has **less degree of freedom** in the model compared to discriminative model. So generative model is more robust, less prone to overfitting while discriminative is the other way around. So discriminative models usually tend to do better if you have lots of data; generative models may be better if you have some extra unlabeled data(the generative model has its own advantages such as the capability of dealing with missing data). 
+ - Estimate conditional models P(Y|X)
+ - Linear regression, Logistic regression
+
+
+
+
+
 
 
 ## Probabilistic Graphical Model
@@ -150,25 +173,7 @@ It uses a `undirected graph` as the intrinsic representation.
 
 
 ---------------------------------------------------------------------------------------------
-# Generative VS Discriminative Model
-Machine Learning models can be typically divided into two types. Discriminative and Generative models. Discriminative models deal with classification or categorization of the data, examples include SVMs, linear/logistic regression, CRFs etc. Generative approaches model how the data is generated and various other tasks can be further addressed with this generative information, examples include HMMs, GMM, Boltzman machines. Deep learning models such as DBMs, Variational Auto-encoders are again generative models.
 
-If you are keen on studying generative models and delving deeper into them, I would say concepts and thorough knowledge on Probabilistic graphical models is essential. If your focus is on Discriminative models or planning to use deep learning as a blackbox then you can get away without PGM and its probably not very essential. But if you are planning for a research either in implicit or explicit generative models or especially deep generative models, then I strongly recommend PGM as a course. Its a valuable tool for sure.
-
- - Generative algorithm: learning each structure, and then classifying it using the knowledge you just gained
- - Discriminative algorithm: determining the difference in the each without learning the structure, and then classifying the data_point.
-<img src="https://user-images.githubusercontent.com/31917400/52206132-3a894180-2871-11e9-8cdd-81ac93c74e1d.jpg" />
-
-A generative algorithm models how the data was "generated", so you ask it "what's the likelihood this or that class generated this instance?" and pick the one with the **better probability**. A discriminative algorithm uses the data to create a decision boundary, so you ask it "what side of the decision boundary is this instance on?" So it doesn't create a model of how the data was generated, it makes a model of what it thinks the boundary between classes looks like.
- - Estimate joint probability P(Y, X) = P(Y|X)P(X)
- - Estimates not only probability of labels but also the features
- - Once model is fit, can be used to generate data
- - LDA, QDA, Naive Bayes, etc
- - (-) Often works worse, particularly when assumptions are violated
-
-Since **discriminative** cares `P(Y|X)` only, while **generative** cares `P(X,Y) and P(X)` at the same time, in order to predict **P(Y|X)** well, the generative model has **less degree of freedom** in the model compared to discriminative model. So generative model is more robust, less prone to overfitting while discriminative is the other way around. So discriminative models usually tend to do better if you have lots of data; generative models may be better if you have some extra unlabeled data(the generative model has its own advantages such as the capability of dealing with missing data). 
- - Estimate conditional models P(Y|X)
- - Linear regression, Logistic regression
 
 
 
