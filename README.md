@@ -3,8 +3,10 @@ Machine Learning models can be typically divided into two types. Discriminative 
 
 If you are keen on studying generative models and delving deeper into them, I would say concepts and thorough knowledge on Probabilistic graphical models is essential. If your focus is on Discriminative models or planning to use deep learning as a blackbox then you can get away without PGM and its probably not very essential. But if you are planning for a research either in implicit or explicit generative models or especially deep generative models, then I strongly recommend PGM as a course. Its a valuable tool for sure.
 
- - Generative algorithm: learning each structure, and then classifying it using the knowledge you just gained
+ - Generative algorithm: learning each structure, and then classifying it using the knowledge you just gained.
+   - A generative model is a statistical model of the joint probability distribution on `P(X,Y)` and Classifiers are computed using probablistic models. 
  - Discriminative algorithm: determining the difference in the each without learning the structure, and then classifying the data_point.
+   - A discriminative model is a statistical model of the conditional probability distribution on `P(Y|X=x)` and Classifiers computed **without using a probability model** are also referred to loosely as "discriminative".
 <img src="https://user-images.githubusercontent.com/31917400/52206132-3a894180-2871-11e9-8cdd-81ac93c74e1d.jpg" />
 
 A generative algorithm models how the data was "generated", so you ask it "what's the likelihood this or that class generated this instance?" and pick the one with the **better probability**. A discriminative algorithm uses the data to create a decision boundary, so you ask it "what side of the decision boundary is this instance on?" So it doesn't create a model of how the data was generated, it makes a model of what it thinks the boundary between classes looks like.
