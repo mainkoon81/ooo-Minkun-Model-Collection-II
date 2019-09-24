@@ -186,8 +186,9 @@ It uses a `undirected graph` as the intrinsic representation.
  - Rule-based Classification Algorithm:
    - As a **Supervised method**, labels are used to learn the `data structure` which allows the **classification** of future observations.
    - LDA(parametric), QDA
+   - LDA
    - KNN
-### 1. Linear Discriminant Analysis
+### 1. LDA_01. Linear Discriminant Analysis
 # `P(g|x)`
  - Predict the membership of the given vector `x`. 
  - We have a dataset containing lots of vector observations(rows) and their labels. 
@@ -225,7 +226,7 @@ It uses a `undirected graph` as the intrinsic representation.
    - In LogisticRegression, the log-membership odd between Grps are **linear functions** of the vector data x as well. 
    <img src="https://user-images.githubusercontent.com/31917400/52282688-e6f22300-2958-11e9-923a-5be3e22e8de9.jpg" />
 
-### 2. Latent Dirichlet Allocation
+### 2. LDA_02. Latent Dirichlet Allocation
  - The finite Dirichlet distribution is a distribution over distributions, namely over multinomial distributions. That means if you draw a sample from it, you get a random distribution. A loaded die can be described by a `multinomial distribution`. A machine that makes biased die with some random error can be described by a `Dirichlet distribution`. Suppose there are boxes with chocolates, with some portion of dark and sweet chocolates. You pick at random one of the boxes(perhaps some kinds of boxes can be more common than others. Then, you can pick at random one of the chocolates. So you have a distribution (a collection of boxes) of distributions (chocolates in a box). 
    - Just as the beta distribution is the conjugate prior for a binomial likelihood, the Dirichlet distribution is the conjugate prior for the multinomial likelihood. It can be thought of as a **multivariate beta distribution** for a collection of probabilities (that must sum to 1). 
  - LDA is a “generative probabilistic model” of a collection of **composites made up of parts**. The composites are `documents` and the parts are `words` in terms of **topic(LatentVariable)** modeling. The probabilistic topic model estimated by LDA consists of two tables (matrices):
@@ -258,13 +259,6 @@ It uses a `undirected graph` as the intrinsic representation.
      - Step_6) repeat from step 2 until you’ve reached how many WORDS this DOCUMENT was set to have.
 
 
-### Dirichlet Processes
- - Goal
-   - Density Estimation
-   - Semi-parametric modelling
-   - Sidestepping model selection/averaging
- 
- 
 
 
 
