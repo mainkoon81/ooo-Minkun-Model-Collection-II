@@ -75,11 +75,20 @@ Since **discriminative** cares `P(Y|X)` only, while **generative** cares `P(X,Y)
    <img src="https://user-images.githubusercontent.com/31917400/52282688-e6f22300-2958-11e9-923a-5be3e22e8de9.jpg" />
 
 ### 2. LDA_02. Latent Dirichlet Allocation
- - The finite Dirichlet distribution is a distribution over distributions, namely over multinomial distributions. That means if you draw a sample from it, you get a random distribution. A loaded die can be described by a `multinomial distribution`. A machine that makes biased die with some random error can be described by a `Dirichlet distribution`. Suppose there are boxes with chocolates, with some portion of dark and sweet chocolates. You pick at random one of the boxes(perhaps some kinds of boxes can be more common than others. Then, you can pick at random one of the chocolates. So you have a distribution (a collection of boxes) of distributions (chocolates in a box). 
-   - Just as the beta distribution is the conjugate prior for a binomial likelihood, the Dirichlet distribution is the conjugate prior for the multinomial likelihood. It can be thought of as a **multivariate beta distribution** for a collection of probabilities (that must sum to 1). 
- - LDA is a “generative probabilistic model” of a collection of **composites made up of parts**. The composites are `documents` and the parts are `words` in terms of **topic(LatentVariable)** modeling. The probabilistic topic model estimated by LDA consists of two tables (matrices):
-   - 1st table: the probability of selecting a particular `part(word)` when sampling a particular **topic(category)**.
-   - 2nd table: the probability of selecting a particular **topic(category)** when sampling a particular `document`.
+The finite Dirichlet distribution is a distribution over distributions, namely over multinomial distributions. That means if you draw a sample from it, you get a random distribution. A loaded die can be described by a `multinomial distribution`. A machine that makes biased die with some random error can be described by a `Dirichlet distribution`. Suppose there are boxes with chocolates, with some portion of dark and sweet chocolates. You pick at random one of the boxes(perhaps some kinds of boxes can be more common than others. Then, you can pick at random one of the chocolates. So you have a distribution (a collection of boxes) of distributions (chocolates in a box). 
+ - Just as the beta distribution is the conjugate prior for a binomial likelihood, the Dirichlet distribution is the conjugate prior for the multinomial likelihood. It can be thought of as a **multivariate beta distribution** for a collection of probabilities (that must sum to 1). 
+   
+LDA is a “generative probabilistic model” of a collection of **composites made up of parts**. 
+ - The composites are `documents`.
+ - The **topics** are Latent Variable. 
+ - The parts are `words`  
+ - `Document` is a distribution over `topics`. 
+ - `Topic` is a distribution of `words`.
+<img src="https://user-images.githubusercontent.com/31917400/67500637-e7635300-f67a-11e9-93f5-ff72ffa0a04b.jpg" />
+
+The probabilistic topic model estimated by LDA consists of two tables (matrices):
+ - 1st table: the probability of selecting a particular `part(word)` when sampling a particular **topic(category)**.
+ - 2nd table: the probability of selecting a particular **topic(category)** when sampling a particular `document`.
 <img src="https://user-images.githubusercontent.com/31917400/52525957-842abf80-2ca9-11e9-8465-b36a9e1d2d4e.jpg" />
 
  - > In the chart above, every topic is given the same alpha value. Each dot represents some distribution or mixture of the three topics like (1.0, 0.0, 0.0) or (0.4, 0.3, 0.3). Remember that each sample has to add up to one. At low alpha values (less than one), most of the topic distribution samples are in the corners (near the topics). For really low alpha values, it’s likely you’ll end up sampling (1.0, 0.0, 0.0), (0.0, 1.0, 0.0), or (0.0, 0.0, 1.0). This would mean that a document would only ever have one topic if we were building a three topic probabilistic topic model from scratch.
@@ -89,7 +98,7 @@ Since **discriminative** cares `P(Y|X)` only, while **generative** cares `P(X,Y)
    - Pick your unique set of WORDS.
    - Pick how many DOCUMENTS you want.
    - Pick how many WORDS you want per each DOCUMENT (sample from a Poisson distribution).
-   - Pick how many `topics`(categories) you want.
+   - Pick how many `topics`(categories or label) you want.
    - Pick a number between not zero and positive infinity and call it **alpha**.
    - Pick a number between not zero and positive infinity and call it **beta**.
    - Build the `**WORDS** VS **topics** table`. 
