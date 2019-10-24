@@ -95,6 +95,8 @@ The probabilistic topic model estimated by LDA consists of two tables (matrices)
  - > At alpha equal to one, any space on the surface of the triangle (2-simplex) is fair game (uniformly distributed). You could equally likely end up with a sample favoring only one topic, a sample that gives an even mixture of all the topics, or something in between. For alpha values greater than one, the samples start to congregate to the center. This means that as alpha gets bigger, your samples will more likely be uniform or an even mixture of all the topics.
  
  - WTF? __Simplest Generative Procedure:__
+ <img src="https://user-images.githubusercontent.com/31917400/67502548-ebdd3b00-f67d-11e9-9ac6-c015878416be.jpg" />
+
    - Pick your unique set of WORDS.
    - Pick how many DOCUMENTS you want.
    - Pick how many WORDS you want per each DOCUMENT (sample from a Poisson distribution).
