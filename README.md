@@ -1,3 +1,9 @@
+### [Note] Variations on supervised and unsupervised Model
+ - Semi-Supervised Learning:
+   - we have a bunch of pairs (**x**1,**y**1), (**x**2,**y**2), ...(**x**_i,**y**_i), and then we are additionally given more x values such as x_i+1, x_i+2,..up to x_n. Our task is to predict `y_i+1`, `y_i+2`,..up to `y_n`.
+ - Reinforcement Learning:
+   - Investigate the "reward/loss"(long/short term payoff) associated with a certain action or state..
+
 # Generative VS Discriminative Model
 Machine Learning models can be typically divided into two types. Discriminative and Generative models. Discriminative models deal with classification or categorization of the data, examples include SVMs, linear/logistic regression, CRFs etc. Generative approaches model how the data is generated and various other tasks can be further addressed with this generative information, examples include HMMs, GMM, Boltzman machines. Deep learning models such as DBMs, Variational Auto-encoders are again generative models.
 
