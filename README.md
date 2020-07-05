@@ -191,7 +191,7 @@ In contrast to the plain autoencoders, it has `sampling inside` and has `variati
    
    - *In VI, the **KL-Divergence** (where each `q(z)` is a finger) should be minimized. *In VAE, the `Jansen's lower bound` as a **KL-Divergence form** needs to be maximized..(where `q(z)` is a mixing coefficient for GMM form with `log(p/q)` as a Gaussian cluster) and each Jansen's lower bound is a finger. So..in VI, the **latent variable estimator** is the joint of all `q(z)`, while in VAE, the **latent variable estimator** is the sum of a bunch of `Jansen's lower bound`ssss. 
    
-   - Story: a. `**Encoding**: Discover the memberships from our dataset` -> b. `**Decoding**: Generate new data based on the memberships`
+   - __[Story]:__ `**Encoding**: Discover the latent memberships from our dataset` -> `**Decoding**: Generate new data based on the latent memberships`
      - Ok, let's do some reverse enigineering. 
      - ## How to get `w` for Decoding? 
        - ## we need `t` for Encoding...**You should deal with the latent variable first!**
