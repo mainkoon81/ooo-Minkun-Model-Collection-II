@@ -17,9 +17,11 @@ Machine Learning models can be typically divided into two types. Discriminative 
        - `f(X|Y)P(Y)` : first choose a class, then given the class, we choose(generate) the point X. 
        - P(Y|X)f(X) : first choose the point X, then given the point, we choose a class. This is discriminative though. 
      - Estimates not only probability of labels but also the features
-     - Once model is fit, can be used to generate data
-     - LDA, QDA, Naive Bayes, etc
-     - (-) Often works worse, particularly when assumptions are violated
+     - Once model is fit, can be used to generate data, but often works worse, particularly when assumptions are violated
+   - Linear Generative Algorithm
+     - LDA, QDA, PCA, Naive Bayes, etc.
+   - Nonlinear Generative Algorithm
+     - AutoEncoder, Variational AutoEncoder, etc.
    
  - __[B]. Discriminative algorithm:__ determining the difference in the each without learning the structure, and then classifying the data_point.
    - A discriminative model is a statistical model of the conditional probability distribution on `P(Y|X=x)` and Classifiers computed **without using a probability model** are also referred to loosely as "discriminative".
@@ -44,7 +46,8 @@ Since **discriminative** cares `P(Y|X)` only, while **generative** cares `P(X,Y)
    - LDA(parametric), QDA
    - LDA
    - KNN
-### 1. LDA_01. Linear Discriminant Analysis
+---------------------------------------------------------------------------------------------------------------------
+### 1. Linear Discriminant Analysis
 # `P(g|x)`
  - Predict the membership of the given vector `x`. 
  - We have a dataset containing lots of vector observations(rows) and their labels. 
@@ -82,7 +85,7 @@ Since **discriminative** cares `P(Y|X)` only, while **generative** cares `P(X,Y)
    - In LogisticRegression, the log-membership odd between Grps are **linear functions** of the vector data x as well. 
    <img src="https://user-images.githubusercontent.com/31917400/52282688-e6f22300-2958-11e9-923a-5be3e22e8de9.jpg" />
 
-### 2. LDA_02. Latent Dirichlet Allocation
+### 2. Latent Dirichlet Allocation
 The finite Dirichlet distribution is a distribution over distributions, namely over multinomial distributions. That means if you draw a sample from it, you get a random distribution. A loaded die can be described by a `multinomial distribution`. A machine that makes biased die with some random error can be described by a `Dirichlet distribution`. Suppose there are boxes with chocolates, with some portion of dark and sweet chocolates. You pick at random one of the boxes(perhaps some kinds of boxes can be more common than others. Then, you can pick at random one of the chocolates. So you have a distribution (a collection of boxes) of distributions (chocolates in a box). 
  - Just as the beta distribution is the conjugate prior for a binomial likelihood, the Dirichlet distribution is the conjugate prior for the multinomial likelihood. It can be thought of as a **multivariate beta distribution** for a collection of probabilities (that must sum to 1). 
    
@@ -126,8 +129,8 @@ The probabilistic topic model estimated by LDA consists of two tables (matrices)
      - Step_6) repeat from step 2 until you’ve reached how many WORDS this DOCUMENT was set to have.
 
 
-
-
+---------------------------------------------------------------------------------------------------------------------
+### 2. AutoEncoder
 
 
 
