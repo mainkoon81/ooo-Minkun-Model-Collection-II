@@ -150,7 +150,7 @@ When MLE does not work for the original margin of log-likelihood, then we try to
    - Use (0)`Hidden "t" value`, and (1)`Alpha Coefficient: q(t)`, (2) **log(**`p(x, t)/q(t)`**)**
    - **min{** `q(t)`*log[`p(x,t)/q(t)`] **}** ...KL-Divergence.. This is the Jensen's lower bound? Let's re-express our `log marginal` with KL-Divergence elements!
    - Imagine each finger(Jansen's lower bound) is a cluster ???
- <img src="https://user-images.githubusercontent.com/31917400/71264042-20e2d280-233b-11ea-9b2e-e33f3d275411.jpg"/>
+ <img src="https://user-images.githubusercontent.com/31917400/86539994-1fed4900-bef9-11ea-8817-ed6243b4bcbb.jpg"/>
 
 General EM-Algorithm
 <img src="https://user-images.githubusercontent.com/31917400/71264565-458b7a00-233c-11ea-88d6-e3316d5fef5b.jpg"/>
