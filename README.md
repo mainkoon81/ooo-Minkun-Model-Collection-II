@@ -130,16 +130,17 @@ The probabilistic topic model estimated by LDA consists of two tables (matrices)
 ## 3. AutoEncoder
  - As a **Unsupervised method**,
 
-### c-3) Variational Inference + Neural Network = Scalable VI
+### Variational Inference + Neural Network = Scalable VI
 10 years ago, people used to think that Bayesian methods are mostly suited for small datasets because it's computationally expensive. In the era of Big data, our Bayesian methods met deep learning, and people started to make some mixture models that has neural networks inside of a probabilistic model. 
 
 How to scale Bayesian methods to `large datasets`? The situation has changed with the development of **stochastic Variational Inference**, trying to solve the inference problem exactly without the help of sampling. 
 
 ---------------------------------------------------------------------------------------------------------------------------------------
-## > Background Knowledge: Let's say we have a trouble with EM in GMM...saying that we cannot calculate the `MLE value` of the soft clusters???
+## > Background Knowledge: 
+Let's say we have a trouble with EM in GMM...saying that we cannot calculate the `MLE value` of the soft clusters???
 
 This is the useful story when you cannot calculate the MLE value in the EM algorithm..
-<img src="https://user-images.githubusercontent.com/31917400/86511165-45d9f700-bdee-11ea-8e61-6e8adc5d0b8d.jpg"/>
+<img src="https://user-images.githubusercontent.com/31917400/86541806-ce988600-bf07-11ea-8dc6-9da63e6ee9f3.jpg"/>
 When MLE does not work for the original margin of log-likelihood, then we try to get a **lower bound** with the function that we can easily optimize?  Instead of maximizing the original margin of log-likelihood, we can maximize its **lower bound**!!
 
 ## Now, Let's find the Lower Bound to estimate the `MLE value`!
