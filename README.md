@@ -136,7 +136,7 @@ The probabilistic topic model estimated by LDA consists of two tables (matrices)
 How to scale Bayesian methods to `large datasets`? The situation has changed with the development of **stochastic Variational Inference**, trying to solve the inference problem exactly without the help of sampling. 
 
 ---------------------------------------------------------------------------------------------------------------------------------------
-## > Background Knowledge: Let's say we have a trouble with EM...saying that we cannot calculate the `MLE value` of the soft clusters???
+## > Background Knowledge: Let's say we have a trouble with EM in GMM...saying that we cannot calculate the `MLE value` of the soft clusters???
 
 This is the useful story when you cannot calculate the MLE value in the EM algorithm..
 <img src="https://user-images.githubusercontent.com/31917400/86511165-45d9f700-bdee-11ea-8e61-6e8adc5d0b8d.jpg"/>
