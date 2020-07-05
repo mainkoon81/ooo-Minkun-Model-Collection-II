@@ -189,7 +189,7 @@ In contrast to the plain autoencoders, it has `sampling inside` and has `variati
    - ## overview: get some `Q(latent variable)`
    <img src="https://user-images.githubusercontent.com/31917400/73172457-fd116a00-40fa-11ea-879e-33e83d73730e.jpeg"/>
    
-   - In VI, the **KL-Divergence** (where each `q(z)` is a finger) should be minimized. In VAE, the `Jansen's lower bound` as a **KL-Divergence form** needs to be maximized..(where `q(z)` is a mixing coefficient for GMM form and each Jansen's lower bound is a finger).  
+   - *In VI, the **KL-Divergence** (where each `q(z)` is a finger) should be minimized. *In VAE, the `Jansen's lower bound` as a **KL-Divergence form** needs to be maximized..(where `q(z)` is a mixing coefficient for GMM form with `log(q/p)` is a Gaussian cluster) and each Jansen's lower bound is a finger.  
    
    - Story: 
      - a. **Encoding**: Discover the memberships from our dataset -> b. **Decoding**: Generate new data based on the memberships
