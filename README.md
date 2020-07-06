@@ -185,19 +185,20 @@ In contrast to the plain autoencoders, it has `sampling inside` and has `variati
    - The problem with this approach is that you have to normalize your distribution. You have to make your distribution to sum up to one, with respect to sum according to all possible images in the world, and there are billions of them. So, this normalization constant is very expensive to compute, and you have to compute it to do the training or inference in the proper manner. HOW? You can use the chain rule. `Any probabilistic distribution can be decomposed into a product of some conditional distributions`, then we build these kind of conditional probability models to model our `overall joint probability`. 
  - [2.RNN]: how to represent these `conditional probabilities` is with **RNN** which basically will read your image pixel by pixel, and then outputs your prediction for the next pixel - Using proximity, Prediction for brightness for next pixel for example! And this approach makes modeling much easier because now normalization constant has to think only about 1D distribution.
    - The problem with this approach is that you have to generate your new images one pixel at a time. So, if you want to generate a new image you have to first generate X1 from the marginal distribution X1, then you will feed this into the RNN, and it will output your distribution on the next pixel and etc. So, no matter how many computers you have, one high resolution image can take like minutes which is really long...
- - ### [3. Our pick is pdf] This is very important!!!
-   - **CNN with Infinite continuous GMM:** In short, we can try **`infinite mixture of Gaussians` which can represent any probability distribution!** Let's say if each object (image X) has a corresponding **latent variable `t`**, and the image X is caused by this **`t`**, then we can marginalize out w.r.t **`t`**, and the conditional distribution `P(X|t)` is Gaussian. We can have a mixture of infinitely many Gaussians, for each value of **"t"**(membership?), then we mix these Gaussian with **weights**. Well...we are trying to use NN inside this model at the end... 
-     - First, we should define the **prior** and the **likelihood**  to model `P(x)` which is the Sum( `P(x,t)`: **the un-normalized posterior** )
-       - (1)`Prior` for the latent variable `t`: `P(t) = N(0, I)`.. oh yeah..the membership `t` around 0 ... **Done and Dusted**! 
-       - (2)`Likelihood` for the data x: `P(X|t) = N( μ(t), Σ(t) )`...it can be a gaussian with parameters relying on `t`... **This is tricky**! 
+ - ### [3. Our pick is pdf] This is very important. Let's find the density model of our data!
+   - **CNN with Infinite continuous GMM:** In short, we can try **`infinite mixture of Gaussians` which can represent any probability distribution!** Let's say if each object (image X) has a corresponding **latent variable `t`**, and the image X is caused by this **`t`**, then we can marginalize out w.r.t **`t`**, and the conditional distribution `P(X|t)` is Gaussian. We can have a mixture of infinitely many Gaussians, for each value of **"t"**(membership?). 
+     - Then we mix these Gaussian with **weights**(mixing coefficients). Yes. We are trying to use Neural Network (a.k.a weighting machine) inside this model at the end... 
+     - First, we should define the **prior** `P(t)` and the **likelihood** `P(x|t)`  to model `P(x)` which is the Sum( `P(x,t)`: **the un-normalized posterior** )
+       - (1)`Prior` for the latent variable **t**: `P(t) = N(0, I)`.. oh yeah..the membership `t` around 0 ... **Done and Dusted**. 
+       - (2)`Likelihood` for the data **x**: `P(x|t) = N( μ(t), Σ(t) )`...it can be a gaussian with parameters relying on `t`... **This is tricky**! 
          - `μ(t)` = W*`t` + b  (Of course, each component's location would be subject to the membership `t`)
          - `Σ(t)` = ![formula](https://render.githubusercontent.com/render/math?math=\Sigma_0) (Of course, each component's size would be subject to the membership `t`) 
          - REALLY???? Here we are skeptical about the above linearity of the parameterization..
            - `μ(t)` = ![formula](https://render.githubusercontent.com/render/math?math=CNN_1(t))..if you input `t`, this CNN outputs the mean? blurry? `image vector`!
            - `Σ(t)` = ![formula](https://render.githubusercontent.com/render/math?math=CNN_2(t))..if you input `t`, this CNN outputs the `Cov matirx`
-           - `CNN` generate weights `w`...at the end..CNN is just giving you a bunch of weights to your likelihood.. It's a weight machine. Let's say the `w` is another parameter...it's like..`w` is the **mixing coefficient**? so CNN is the mixing coefficient machine? 
-             - `μ(t)` -> `μ(t|w)`
-             - `Σ(t)` -> `Σ(t|w)`... problem is that this is too huge...
+           - `CNN` generate weights `w`...at the end..CNN is just giving you a bunch of weights to your likelihood..like a weighting machine. Let's say the `w` is another parameter...it's like...**mixing coefficient**?  
+             - ![formula](https://render.githubusercontent.com/render/math?math=CNN_1(t)) -> `μ(t|w)`
+             - ![formula](https://render.githubusercontent.com/render/math?math=CNN_2(t)) -> `Σ(t|w)`... problem is that this is too huge...
                - How about Let CNN ignores other covariance values except "diag(![formula](https://render.githubusercontent.com/render/math?math=\sigma^2(t,w)))" 
                  - `Σ(t|w)` -> "diag(![formula](https://render.githubusercontent.com/render/math?math=\sigma^2(t,w)))" 
      - Now, let's train our model! Find the partameters - `t`, `w`
