@@ -213,7 +213,7 @@ In contrast to the plain autoencoders, it has `sampling inside` and has `variati
 Only if we have `hidden variables`...
    <img src="https://user-images.githubusercontent.com/31917400/72342676-f3344380-36c4-11ea-90a2-ea05caf2e11a.jpg"/>
  
-   - ## Overview: get some variational distribution `q(t)` or `L(t)` ?
+   - ## Overview: get some variational distribution `q(t)` or `LB(t)` ?
    <img src="https://user-images.githubusercontent.com/31917400/86622394-bc762080-bfb7-11ea-9470-ad2fbd382d0f.jpeg"/>
    
    - *In VI, the **KL-Divergence** (where each `q(z)` is a `finger`) should be **`minimized`**. In VI, the **MLE estimator** is the joint of all `q(z)`,
