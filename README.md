@@ -203,7 +203,8 @@ In contrast to the plain autoencoders, it has `sampling inside` and has `variati
      - Now, let's train our model!
        - `MLE`: Can you get some probability values for each datapoint? Let's maximize the density of our data given the parameters - `w`,`t` ? What is important is that the mixing coefficient `w` depends on `t`. 
        - If we have a latent variable, it's natural to go with EM-Algorithm. Let's build `Jansen's bounds` on the MLE and maximize the sum of those bounds!
-         - SUM(**`log[P(x|w)]`** per each observation`x`)..so try to come up with another "SUM" caused by the latent variable `t`.  
+         - SUM(**`log[P(x|w)]`** per each observation`x`)..so try to come up with another "SUM" caused by the latent variable `t`. 
+         - But...do you know the un-normalized posterior:`P(x,t)`? if you know the prior `P(t)`, cannot imagine the analytical form of the likelihood `P(X|t)` = N( ![formula](https://render.githubusercontent.com/render/math?math=CNN_1(t)), ![formula](https://render.githubusercontent.com/render/math?math=CNN_2(t)) )    
 
 ## What is Decoder?
 Only if we have `hidden variables`...
