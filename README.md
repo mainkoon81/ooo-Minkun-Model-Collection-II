@@ -205,10 +205,8 @@ In contrast to the plain autoencoders, it has `sampling inside` and has `variati
        - If we have a latent variable, it's natural to go with Generalized EM-Algorithm, building `Jansen's bounds` on the MLE and maximize the sum of those bounds!
          - SUM(**`log[P(x|w)]`** per each observation`x`)..so try to come up with another "SUM" caused by the latent variable `t`. 
          - But...can we obtain the un-normalized posterior:`P(x,t)`? Although knowing the prior `P(t)`, you cannot imagine the analytical form of the likelihood `P(x|t)` = N( ![formula](https://render.githubusercontent.com/render/math?math=CNN_1(t)), ![formula](https://render.githubusercontent.com/render/math?math=CNN_2(t)) ) ???
-       - Then how to train? 
+       - Then how to train? How to find the parameter in the first place?
        
-       
-
 ## You know what? we are start off with Decoder ?
 Only if we have `hidden variables`...
    <img src="https://user-images.githubusercontent.com/31917400/72342676-f3344380-36c4-11ea-90a2-ea05caf2e11a.jpg"/>
@@ -219,8 +217,8 @@ Only if we have `hidden variables`...
    - *In VI, the **KL-Divergence** (where each `q(z)` is a `finger`) should be **`minimized`**. In VI, the **MLE estimator** is the joint of all `q(z)`,
    - *In VAE, the `Jansen's lower bound` as a **KL-Divergence** needs to be **`maximized`**..(where `q(z)` is a mixing coefficient for GMM form with `log(p/q)` as a Gaussian cluster) and each Jansen's lower bound is a `finger`. In VAE, the **MLE estimator** is the sum of a bunch of `Jansen's lower bound`ssss. 
    
-   - __[Story]:__ `**Encoding**: Discover the latent memberships from our dataset` -> `**Decoding**: Generate new data based on the latent memberships`
-     - Ok, let's do some reverse enigineering. 
+   - __[Story]:__ `**Encoding**: Discover the latent parameter from our dataset` -> `**Decoding**: Generate new data based on the latent memberships`
+     - Ok, let's do some reverse enigineering. Back to the question. How to train ? How to find the parameter in the first place?
      - ## How to get `w` for Decoding? 
        - ## we need `t` for Encoding...**You should deal with the latent variable first!**
        - Before `w`, we need `P(t|x)`. Find the posterior of the `continuous latent variable "t"`
