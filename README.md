@@ -190,8 +190,11 @@ In contrast to the plain autoencoders, it has `sampling inside` and has `variati
      - First, we should define the **prior** and the **likelihood**! 
        - `Prior` for the latent variable `t`: `P(t) = N(0, I)`.. oh yeah..`t` around 0 
        - `Likelihood` for the data x: `P(X|t) = N( μ(t), Σ(t) )`...it can be a gaussian with parameters relying on `t`...How?
-         - `μ(t)` = W*t + b  (Of course, each component's location would be subject to the membership `t`)
+         - `μ(t)` = W*`t` + b  (Of course, each component's location would be subject to the membership `t`)
          - `Σ(t)` = ![formula](https://render.githubusercontent.com/render/math?math=\Sigma_0) (Of course, each component's size would be subject to the membership `t`) 
+         - REALLY???? Here we are skeptical about the above linearity of the parameterization..
+           - `μ(t)` = ![formula](https://render.githubusercontent.com/render/math?math=CNN_1(t))
+           - `Σ(t)` = ![formula](https://render.githubusercontent.com/render/math?math=CNN_2(t))
 
 ## What is Decoder?
 Only if we have `hidden variables`...
