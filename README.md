@@ -178,7 +178,7 @@ In contrast to the plain autoencoders, it has `sampling inside` and has `variati
    - __Represent highly structured data in low dimensional embeddings__
      - ex> For example, people sometimes build these kind of latent codes for molecules and then try to discover new drugs by exploring this space of molecules in this latent space.....?? 
 
-## Let's model the image `P(x)` !
+## Let's model the image `P(x)` ! Yes, it's about damn large sample size with high dimensionality..
 <img src="https://user-images.githubusercontent.com/31917400/71101742-24495300-21af-11ea-9821-a14e07c54148.jpg"/>
 
  - [1.CNN]: Let's say that **CNN** will actually return your **logarithm of probability**. 
