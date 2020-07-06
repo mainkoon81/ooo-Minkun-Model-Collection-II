@@ -227,8 +227,8 @@ Only if we have `hidden variables`...
            - Let's make `q(t)`= N(m, s^2) flexible. If assume all **q(![formula](https://render.githubusercontent.com/render/math?math=t_i))** = N( ![formula](https://render.githubusercontent.com/render/math?math=CNN_1(t))=`m(x_i, φ)`, ![formula](https://render.githubusercontent.com/render/math?math=CNN_2(t))=`s^2(x_i, φ)` ), then the training get much easier. Since we already have the original input data `x`, we can simply ask CNN to produce weight `φ`.
            <img src="https://user-images.githubusercontent.com/31917400/72226055-8a45b200-3584-11ea-96ce-b6ad7d78de6f.jpg"/>
            
-           - To maximize the **Jensen's lower bound** at the end, we pass our **initial dataset** through our [first neural network] as an encoder with parameters`φ` to get the parameters `m`,`s^2` of the variational distribution `q(t)` to get the **latent variable** disribution. How `t` are distributed? 
-           - We MC sample from this distribution`q(t)` random data pt `t`.  
+           - Once we pass our initial data `x` through our [first neural network] as an encoder with parameters`φ`, it returns `m`,`s^2` which are parameters of `q(t)`. How `t` are distributed? 
+             - ## We found `q(t)`! Now we do MonteCarlo-Sampling from this distribution`q(t)` to get random data pt `t`.  
          - Finally, we pass this sampled vector `T` into the `second neural network` with parameters`w`. 
            - It outputs us the distribution that are as close to the input data as possible.
            <img src="https://user-images.githubusercontent.com/31917400/72226599-d136a600-358a-11ea-9e13-69138c206a53.jpg"/>
