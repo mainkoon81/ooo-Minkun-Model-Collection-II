@@ -221,7 +221,7 @@ Only if we have `hidden variables`...
      - Ok, let's do some reverse enigineering. **Back to the question. How to train?** How to find the parameter in the first place?
      - ## How to get `w` for Decoding? 
        - Remember? `w`(mixing coefficient) relies on `t`(membership). 
-       - Hey, so we first want to obtain the latent variable space! We are conjuring the **Encoder** that outputs the latent parameter `t` space since `w` results from `t`. We build the posterior: `P(t|x)`.. to feed our data to the encoder. 
+       - Hey, so we first want to obtain the latent variable space! We are conjuring the **Encoder** that outputs the latent parameter `t` space since `w` results from `t`. Let's find the posterior `P(t|x)`.. and feed our data into the `encoder`. 
        - Let's try **`Variational Inference`**. 
          - **[Step 1] Bring up the "factorized" variational distribution `q(t)`** and address a parameterization -`m`,`s`- via NN. 
            - Assuming each `q(t)` as the Exponential family function follows ~ N(`m`, `s^2`), then **maximizing the Jansen't Lower Bound** w.r.t `m`,`s^2`. But it's tricky..   
