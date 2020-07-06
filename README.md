@@ -188,13 +188,20 @@ In contrast to the plain autoencoders, it has `sampling inside` and has `variati
  - ### [3. Our pick is pdf] This is very important!!!
    - **CNN with Infinite continuous GMM:** In short, we can try **`infinite mixture of Gaussians` which can represent any probability distribution!** Let's say if each object (image X) has a corresponding **latent variable `t`**, and the image X is caused by this **`t`**, then we can marginalize out w.r.t **`t`**, and the conditional distribution `P(X|t)` is Gaussian. We can have a mixture of infinitely many Gaussians, for each value of **"t"**(membership?), then we mix these Gaussian with **weights**. Well...we are trying to use NN inside this model at the end... 
      - First, we should define the **prior** and the **likelihood**  to model `P(x)` which is the Sum( `P(x,t)`: **the un-normalized posterior** )
-       - `Prior` for the latent variable `t`: `P(t) = N(0, I)`.. oh yeah..`t` around 0 ... **Done and Dusted**! 
-       - `Likelihood` for the data x: `P(X|t) = N( μ(t), Σ(t) )`...it can be a gaussian with parameters relying on `t`... **This is tricky**! 
+       - (1)`Prior` for the latent variable `t`: `P(t) = N(0, I)`.. oh yeah..`t` around 0 ... **Done and Dusted**! 
+       - (2)`Likelihood` for the data x: `P(X|t) = N( μ(t), Σ(t) )`...it can be a gaussian with parameters relying on `t`... **This is tricky**! 
          - `μ(t)` = W*`t` + b  (Of course, each component's location would be subject to the membership `t`)
          - `Σ(t)` = ![formula](https://render.githubusercontent.com/render/math?math=\Sigma_0) (Of course, each component's size would be subject to the membership `t`) 
          - REALLY???? Here we are skeptical about the above linearity of the parameterization..
-           - `μ(t)` = ![formula](https://render.githubusercontent.com/render/math?math=CNN_1(t))
-           - `Σ(t)` = ![formula](https://render.githubusercontent.com/render/math?math=CNN_2(t))
+           - `μ(t)` = ![formula](https://render.githubusercontent.com/render/math?math=CNN_1(t))..if you input `t`, this CNN output the mean? blurry? `image vector`!
+           - `Σ(t)` = ![formula](https://render.githubusercontent.com/render/math?math=CNN_2(t))..if you input `t`, this CNN output the `Cov matirx`
+           - `CNN` generate weights `w`...at the end..CNN is just giving you a bunch of weights to your likelihood.. It's a weight machine. Let's say the `w` is another parameter.
+             - `μ(t)` -> `μ(t|w)`
+             - `Σ(t)` -> `Σ(t|w)`... problem is that this is too huge...
+               - How about Let CNN ignores other covariance values except "diag(![formula](https://render.githubusercontent.com/render/math?math=\sigma^2(t,w)))" 
+                 - `Σ(t|w)` -> "diag(![formula](https://render.githubusercontent.com/render/math?math=\sigma^2(t,w)))" 
+       - Next, 
+           
 
 ## What is Decoder?
 Only if we have `hidden variables`...
