@@ -218,16 +218,14 @@ Only if we have `hidden variables`...
    - *In VAE, the `Jansen's lower bound` as a **KL-Divergence** needs to be **`maximized`**..(where `q(z)` is a mixing coefficient for GMM form with `log(p/q)` as a Gaussian cluster) and each Jansen's lower bound is a `finger`. In VAE, the **MLE estimator** is the sum of a bunch of `Jansen's lower bound`ssss. 
    
    - __[Story]:__ `**Encoding**: Discover the latent parameter from our dataset` -> `**Decoding**: Generate new data based on the latent memberships`
-     - Ok, let's do some reverse enigineering. Back to the question. How to train ? How to find the parameter in the first place?
+     - Ok, let's do some reverse enigineering. **Back to the question. How to train?** How to find the parameter in the first place?
      - ## How to get `w` for Decoding? 
        - Remember? `w`(mixing coefficient) relies on `t`(membership). 
        - Hey, we are first suddenly conjuring the **Encoder** that outputs the latent parameter `t` space! We need the posterior: `P(t|x)`..to feed our data to the encoder..
-         - using MCMC to sample from P(t ∣ X, w)...nope..our likelihood is already fucked up?
-         - using **Variational Inference**...? YES, let's try! First, think **How "t" is distributed**? 
+         - Let's try **`Variational Inference`**. 
          - **Step 1. Bring up the "factorized" variational distribution `q(t)`** and address a parameterization -`m`,`s`- via NN.
-           - Assuming each `q(t)` as the Exponential family function with new Gaussian parameters - `m`vector, `s^2`matrix. 
-           - Maximizing the likelihood function of our model w.r.t `m`,`s^2`...but are they clear? 
-         - We can make `q(t)` more flexible. If assume all `q(t)` share the same parameterization - func`m()`, func`s^2()`, depending on individual parameter `x` and `weight`.. then the training get easier. We have the original input data `x` so let's get some weight `φ` via CNN!
+           - Assuming each `q(t)` as the Exponential family function follows ~ N(`m`, `s^2`), then **maximizing the Jansen't Lower Bound** w.r.t `m`,`s^2`. But it's tricky..   
+           - Let's make `q(t)` flexible. If assume all `q(t)` share the same parameterization ~ N( `m(x,φ)`, `s^2(x,φ)` ), then the training get much easier. Since we already have the original input data `x`, we can simply ask CNN to produce weight `φ`.
            <img src="https://user-images.githubusercontent.com/31917400/72226055-8a45b200-3584-11ea-96ce-b6ad7d78de6f.jpg"/>
            
          - **Step 2. Build an AutoEncoder**
