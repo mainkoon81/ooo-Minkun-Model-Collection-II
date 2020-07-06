@@ -219,9 +219,9 @@ Only if we have `hidden variables`...
    - __[Story]:__ `**Encoding**: Discover the latent parameter from our dataset` -> `**Decoding**: Generate new data based on the latent memberships`
      - Ok, let's do some reverse enigineering. Back to the question. How to train ? How to find the parameter in the first place?
      - ## How to get `w` for Decoding? 
-       - ## we need `t` for Encoding...**You should deal with the latent variable first!**
-       - Before `w`, we need `P(t|x)`. Find the posterior of the `continuous latent variable "t"`
-         - using MCMC to sample from P(t ∣ X, w)...?
+       - Remember? `w`(mixing coefficient) relies on `t`(membership). 
+       - Hey, we are first suddenly conjuring the **Encoder** that outputs the latent parameter `t` space! We need the posterior: `P(t|x)`..to feed our data to the encoder..
+         - using MCMC to sample from P(t ∣ X, w)...nope..our likelihood is already fucked up?
          - using **Variational Inference**...? YES, let's try! First, think **How "t" is distributed**? 
          - **Step 1. Bring up the "factorized" variational distribution `q(t)`** and address a parameterization -`m`,`s`- via NN.
            - Assuming each `q(t)` as the Exponential family function with new Gaussian parameters - `m`vector, `s^2`matrix. 
