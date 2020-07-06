@@ -156,7 +156,7 @@ When MLE does not work for the original margin of log-likelihood, then we try to
 General EM-Algorithm
 <img src="https://user-images.githubusercontent.com/31917400/71264565-458b7a00-233c-11ea-88d6-e3316d5fef5b.jpg"/>
 We built a lower bound on the local likelihood which depends both on the theta to maximize the local likelihood and the parameter q which is the variational distribution value, and it suggests we can optimize this lower bound in iterations by repeating the two steps until convergence. On the E-step, fix theta and maximize the lower bound with respect to q. And on the M-step, fix q and maximize the lower bound with respect of theta. So this is the general view of the expectation maximization. 
-
+## Is it just coincidence that `Jansen's lower bound` looks like `KL-Divergence`? 
 ## Now we just found the first Jansen's bound as a finger. How many more fingers to go? 
 
 ------------------------------------------------------------------------------------------------------------------------
