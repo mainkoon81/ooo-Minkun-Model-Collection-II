@@ -222,9 +222,8 @@ Only if we have `hidden variables`...
      - ## How to get `w` for Decoding? 
        - Remember? `w`(mixing coefficient) relies on `t`(membership). 
        - Hey, so we first want to obtain the latent variable space! We are conjuring the **Encoder** that outputs the latent parameter `t` space since `w` results from `t`. Let's find the posterior `P(t|x)`.. and feed our data into the `encoder`. 
-       - Let's try **`Variational Inference`**. 
+       - Let's try **`Variational Inference`**. Assuming each **q(![formula](https://render.githubusercontent.com/render/math?math=t_i))** as the Exponential family function = N(![formula](https://render.githubusercontent.com/render/math?math=m_i), ![formula](https://render.githubusercontent.com/render/math?math=s_i^2)), so each `q(t)` is different Gaussian...and the value is probability as a mixing coefficient. Then we can **maximize the Jansen't Lower Bound** w.r.t `q`, `m`, `s^2`. But it's so complicate..   
          - **[Step 1] Bring up the "factorized" variational distribution `q(t)`** and let NN return (![formula](https://render.githubusercontent.com/render/math?math=m_i), ![formula](https://render.githubusercontent.com/render/math?math=s_i^2)). 
-           - Assuming each **q(![formula](https://render.githubusercontent.com/render/math?math=t_i))** as the Exponential family function = N(![formula](https://render.githubusercontent.com/render/math?math=m_i), ![formula](https://render.githubusercontent.com/render/math?math=s_i^2)), so each `q(t)` is different Gaussian...and the value is probability as a mixing coefficient. Then we can **maximize the Jansen't Lower Bound** w.r.t `m`,`s^2`. But it's tricky..   
            - Let's make `q(t)` flexible. If assume all **q(![formula](https://render.githubusercontent.com/render/math?math=t_i))** share the same parameterization ~ N( `m(x_i, φ)`, `s^2(x_i, φ)` ), then the training get much easier. Since we already have the original input data `x`, we can simply ask CNN to produce weight `φ`.
            <img src="https://user-images.githubusercontent.com/31917400/72226055-8a45b200-3584-11ea-96ce-b6ad7d78de6f.jpg"/>
            
