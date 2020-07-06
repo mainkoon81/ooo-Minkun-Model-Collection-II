@@ -220,6 +220,7 @@ Only if we have `hidden variables`...
    - __[Story]:__ `**Encoding**: Discover the latent parameter from our dataset` -> `**Decoding**: Generate new data based on the latent memberships`
      - Ok, let's do some reverse enigineering. **Back to the question. How to train?** How to find the parameter in the first place?
      - ## How to get `w` for Decoding? 
+       - The solution is Encoding!
        - Remember? `w`(mixing coefficient) relies on `t`(membership). 
        - Hey, so we first want to obtain the latent variable space! We are conjuring the **Encoder** that outputs the latent parameter `t` space since `w` results from `t`. Let's find the posterior `P(t|x)`.. and feed our data into the `encoder`. 
        - Let's try **`Variational Inference`**. Assuming each **q(![formula](https://render.githubusercontent.com/render/math?math=t_i))** as the Exponential family function = N(![formula](https://render.githubusercontent.com/render/math?math=m_i), ![formula](https://render.githubusercontent.com/render/math?math=s_i^2)), so each `q(t)` is different Gaussian...and the value is probability as a mixing coefficient. Then we can **maximize the Jansen't Lower Bound** w.r.t `q`, `m`, `s^2`. But it's so complicate..Is there another way?   
