@@ -213,8 +213,8 @@ In contrast to the plain autoencoders, it has `sampling inside` and has `variati
 Only if we have `hidden variables`...
    <img src="https://user-images.githubusercontent.com/31917400/72342676-f3344380-36c4-11ea-90a2-ea05caf2e11a.jpg"/>
  
-   - ## overview: get some variational distribution `q(t)`
-   <img src="https://user-images.githubusercontent.com/31917400/73172457-fd116a00-40fa-11ea-879e-33e83d73730e.jpeg"/>
+   - ## Overview: get some variational distribution `q(t)`
+   <img src="https://user-images.githubusercontent.com/31917400/86622394-bc762080-bfb7-11ea-9470-ad2fbd382d0f.jpeg"/>
    
    - *In VI, the **KL-Divergence** (where each `q(z)` is a `finger`) should be **`minimized`**. In VI, the **MLE estimator** is the joint of all `q(z)`,
    - *In VAE, the `Jansen's lower bound` as a **KL-Divergence** needs to be **`maximized`**..(where `q(z)` is a mixing coefficient for GMM form with `log(p/q)` as a Gaussian cluster) and each Jansen's lower bound is a `finger`. In VAE, the **MLE estimator** is the sum of a bunch of `Jansen's lower bound`ssss. 
