@@ -206,7 +206,7 @@ In contrast to the plain autoencoders, it has `sampling inside` and has `variati
          - SUM(**`log[P(x|w)]`** per each observation`x`)..so try to come up with another "SUM" caused by the latent variable `t`. 
          - But...can we obtain the un-normalized posterior:`P(x,t)`? Although knowing the prior `P(t)`, you cannot imagine the analytical form of the likelihood `P(X|t)` = N( ![formula](https://render.githubusercontent.com/render/math?math=CNN_1(t)), ![formula](https://render.githubusercontent.com/render/math?math=CNN_2(t)) ) ???
 
-## What is Decoder?
+## You know what? we are start off with Decoder ?
 Only if we have `hidden variables`...
    <img src="https://user-images.githubusercontent.com/31917400/72342676-f3344380-36c4-11ea-90a2-ea05caf2e11a.jpg"/>
  
