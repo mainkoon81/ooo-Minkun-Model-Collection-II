@@ -222,16 +222,15 @@ Only if we have `hidden variables`...
      - ## How to get `w` for Decoding? 
        - Remember? `w`(mixing coefficient) relies on `t`(membership). 
        - Hey, so we first want to obtain the latent variable space! We are conjuring the **Encoder** that outputs the latent parameter `t` space since `w` results from `t`. Let's find the posterior `P(t|x)`.. and feed our data into the `encoder`. 
-       - Let's try **`Variational Inference`**. Assuming each **q(![formula](https://render.githubusercontent.com/render/math?math=t_i))** as the Exponential family function = N(![formula](https://render.githubusercontent.com/render/math?math=m_i), ![formula](https://render.githubusercontent.com/render/math?math=s_i^2)), so each `q(t)` is different Gaussian...and the value is probability as a mixing coefficient. Then we can **maximize the Jansen't Lower Bound** w.r.t `q`, `m`, `s^2`. But it's so complicate..   
-         - **[Step 1] Bring up the "factorized" variational distribution `q(t)`** and let NN return (![formula](https://render.githubusercontent.com/render/math?math=m_i), ![formula](https://render.githubusercontent.com/render/math?math=s_i^2)). 
-           - Let's make `q(t)` flexible. If assume all **q(![formula](https://render.githubusercontent.com/render/math?math=t_i))** share the same parameterization ~ N( `m(x_i, φ)`, `s^2(x_i, φ)` ), then the training get much easier. Since we already have the original input data `x`, we can simply ask CNN to produce weight `φ`.
+       - Let's try **`Variational Inference`**. Assuming each **q(![formula](https://render.githubusercontent.com/render/math?math=t_i))** as the Exponential family function = N(![formula](https://render.githubusercontent.com/render/math?math=m_i), ![formula](https://render.githubusercontent.com/render/math?math=s_i^2)), so each `q(t)` is different Gaussian...and the value is probability as a mixing coefficient. Then we can **maximize the Jansen't Lower Bound** w.r.t `q`, `m`, `s^2`. But it's so complicate..Is there another way?   
+         - **Bring up the "factorized" variational distribution `q(t)`** and let NN return (![formula](https://render.githubusercontent.com/render/math?math=m_i), ![formula](https://render.githubusercontent.com/render/math?math=s_i^2)) that explains the latent variable `t` space.  
+           - Let's make `q(t)`= N(m, s^2) flexible. If assume all **q(![formula](https://render.githubusercontent.com/render/math?math=t_i))** share the same parameterization ~ N( `m(x_i, φ)`, `s^2(x_i, φ)` ), then the training get much easier. Since we already have the original input data `x`, we can simply ask CNN to produce weight `φ`.
            <img src="https://user-images.githubusercontent.com/31917400/72226055-8a45b200-3584-11ea-96ce-b6ad7d78de6f.jpg"/>
            
-         - **[Step 2] Build an AutoEncoder**
-           - To get the Jensen's lower bound at the end, we pass our **initial dataset** through the `first neural network` encoder with parameters`φ` to get the parameters `m`,`s^2` of the variational distribution `q(t)` to get the **latent variable** disribution. 
+           - To maximize the **Jensen's lower bound** at the end, we pass our **initial dataset** through our [first neural network] as an encoder with parameters`φ` to get the parameters `m`,`s^2` of the variational distribution `q(t)` to get the **latent variable** disribution. How `t` are distributed? 
            - We MC sample from this distribution`q(t)` random data pt `t`.  
-           - We pass this sampled vector `T` into the `second neural network` with parameters`w`. 
-             - It outputs us the distribution that are as close to the input data as possible.
+         - Finally, we pass this sampled vector `T` into the `second neural network` with parameters`w`. 
+           - It outputs us the distribution that are as close to the input data as possible.
            <img src="https://user-images.githubusercontent.com/31917400/72226599-d136a600-358a-11ea-9e13-69138c206a53.jpg"/>
            
  - ### Next, two CNN for Φ and w: Maximize Jensen's Lower bound
