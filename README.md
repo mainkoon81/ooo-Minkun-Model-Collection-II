@@ -160,7 +160,7 @@ We built a lower bound on the local likelihood which depends both on the theta t
 ## Now we just found the first Jansen's bound as a finger. How many more fingers to go? 
 
 ------------------------------------------------------------------------------------------------------------------------
-## EX> Variational Autoencoder and Generative model: 
+# Variational Autoencoder and Generative model: 
 How can we perform efficient inference and learning in directed probabilistic models, in the presence of **continuous latent variables** with **intractable posterior distributions**, and **large datasets**? 
 
 In contrast to the plain autoencoders, it has `sampling inside` and has `variational approximations`. 
@@ -178,7 +178,7 @@ In contrast to the plain autoencoders, it has `sampling inside` and has `variati
    - __Represent highly structured data in low dimensional embeddings__
      - ex> For example, people sometimes build these kind of latent codes for molecules and then try to discover new drugs by exploring this space of molecules in this latent space.....?? 
 
-> Let's model the image!
+## Let's model the image `P(x)` !
 <img src="https://user-images.githubusercontent.com/31917400/71101742-24495300-21af-11ea-9821-a14e07c54148.jpg"/>
 
  - [1.CNN]: Let's say that **CNN** will actually return your **logarithm of probability**. 
@@ -187,9 +187,9 @@ In contrast to the plain autoencoders, it has `sampling inside` and has `variati
    - The problem with this approach is that you have to generate your new images one pixel at a time. So, if you want to generate a new image you have to first generate X1 from the marginal distribution X1, then you will feed this into the RNN, and it will output your distribution on the next pixel and etc. So, no matter how many computers you have, one high resolution image can take like minutes which is really long...
  - ### [3. Our pick is pdf] This is very important!!!
    - **CNN with Infinite continuous GMM:** In short, we can try **`infinite mixture of Gaussians` which can represent any probability distribution!** Let's say if each object (image X) has a corresponding **latent variable `t`**, and the image X is caused by this **`t`**, then we can marginalize out w.r.t **`t`**, and the conditional distribution `P(X|t)` is Gaussian. We can have a mixture of infinitely many Gaussians, for each value of **"t"**(membership?), then we mix these Gaussian with **weights**. Well...we are trying to use NN inside this model at the end... 
-     - First, we should define the **prior** and the **likelihood**! 
-       - `Prior` for the latent variable `t`: `P(t) = N(0, I)`.. oh yeah..`t` around 0 
-       - `Likelihood` for the data x: `P(X|t) = N( μ(t), Σ(t) )`...it can be a gaussian with parameters relying on `t`...How?
+     - First, we should define the **prior** and the **likelihood**  to model `P(x)` which is the Sum( `P(x,t)`: **the un-normalized posterior** )
+       - `Prior` for the latent variable `t`: `P(t) = N(0, I)`.. oh yeah..`t` around 0 ... **Done and Dusted**! 
+       - `Likelihood` for the data x: `P(X|t) = N( μ(t), Σ(t) )`...it can be a gaussian with parameters relying on `t`... **This is tricky**! 
          - `μ(t)` = W*`t` + b  (Of course, each component's location would be subject to the membership `t`)
          - `Σ(t)` = ![formula](https://render.githubusercontent.com/render/math?math=\Sigma_0) (Of course, each component's size would be subject to the membership `t`) 
          - REALLY???? Here we are skeptical about the above linearity of the parameterization..
