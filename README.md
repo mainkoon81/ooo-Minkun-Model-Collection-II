@@ -221,14 +221,14 @@ Only if we have `hidden variables`...
      - Ok, let's do some reverse enigineering. **Back to the question. How to train?** How to find the parameter in the first place?
      - ## How to get `w` for Decoding? 
        - Remember? `w`(mixing coefficient) relies on `t`(membership). 
-       - Hey, we are first suddenly conjuring the **Encoder** that outputs the latent parameter `t` space since `w` results from `t`. We need the posterior: `P(t|x)`..to feed our data to the encoder..
-         - Let's try **`Variational Inference`**. 
-         - **Step 1. Bring up the "factorized" variational distribution `q(t)`** and address a parameterization -`m`,`s`- via NN.
+       - Hey, so we first want to obtain the latent variable space! We are conjuring the **Encoder** that outputs the latent parameter `t` space since `w` results from `t`. We build the posterior: `P(t|x)`.. to feed our data to the encoder. 
+       - Let's try **`Variational Inference`**. 
+         - **[Step 1] Bring up the "factorized" variational distribution `q(t)`** and address a parameterization -`m`,`s`- via NN. 
            - Assuming each `q(t)` as the Exponential family function follows ~ N(`m`, `s^2`), then **maximizing the Jansen't Lower Bound** w.r.t `m`,`s^2`. But it's tricky..   
            - Let's make `q(t)` flexible. If assume all `q(t)` share the same parameterization ~ N( `m(x,φ)`, `s^2(x,φ)` ), then the training get much easier. Since we already have the original input data `x`, we can simply ask CNN to produce weight `φ`.
            <img src="https://user-images.githubusercontent.com/31917400/72226055-8a45b200-3584-11ea-96ce-b6ad7d78de6f.jpg"/>
            
-         - **Step 2. Build an AutoEncoder**
+         - **[Step 2] Build an AutoEncoder**
            - To get the Jensen's lower bound at the end, we pass our **initial dataset** through the `first neural network` encoder with parameters`φ` to get the parameters `m`,`s^2` of the variational distribution `q(t)` to get the **latent variable** disribution. 
            - We MC sample from this distribution`q(t)` random data pt `t`.  
            - We pass this sampled vector `T` into the `second neural network` with parameters`w`. 
