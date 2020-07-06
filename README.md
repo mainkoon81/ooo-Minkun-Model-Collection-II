@@ -221,7 +221,7 @@ Only if we have `hidden variables`...
      - Ok, let's do some reverse enigineering. **Back to the question. How to train?** How to find the parameter in the first place?
      - ## How to get `w` for Decoding? 
        - Remember? `w`(mixing coefficient) relies on `t`(membership). 
-       - Hey, we are first suddenly conjuring the **Encoder** that outputs the latent parameter `t` space! We need the posterior: `P(t|x)`..to feed our data to the encoder..
+       - Hey, we are first suddenly conjuring the **Encoder** that outputs the latent parameter `t` space since `w` results from `t`. We need the posterior: `P(t|x)`..to feed our data to the encoder..
          - Let's try **`Variational Inference`**. 
          - **Step 1. Bring up the "factorized" variational distribution `q(t)`** and address a parameterization -`m`,`s`- via NN.
            - Assuming each `q(t)` as the Exponential family function follows ~ N(`m`, `s^2`), then **maximizing the Jansen't Lower Bound** w.r.t `m`,`s^2`. But it's tricky..   
@@ -231,7 +231,7 @@ Only if we have `hidden variables`...
          - **Step 2. Build an AutoEncoder**
            - To get the Jensen's lower bound at the end, we pass our **initial dataset** through the `first neural network` encoder with parameters`φ` to get the parameters `m`,`s^2` of the variational distribution `q(t)` to get the **latent variable** disribution. 
            - We MC sample from this distribution`q(t)` random data pt `t`.  
-           - We pass this sampled vector `T` into the `second neural network` with parameters`w` 
+           - We pass this sampled vector `T` into the `second neural network` with parameters`w`. 
              - It outputs us the distribution that are as close to the input data as possible.
            <img src="https://user-images.githubusercontent.com/31917400/72226599-d136a600-358a-11ea-9e13-69138c206a53.jpg"/>
            
