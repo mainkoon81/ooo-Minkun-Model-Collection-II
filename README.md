@@ -228,9 +228,9 @@ Only if we have `hidden variables`...
            - Let's make `q(t)`= N(m, s^2) flexible. If assume all **q(![formula](https://render.githubusercontent.com/render/math?math=t_i))** = N( ![formula](https://render.githubusercontent.com/render/math?math=CNN_1(t))=`m(x_i, φ)`, ![formula](https://render.githubusercontent.com/render/math?math=CNN_2(t))=`s^2(x_i, φ)` ), then the training get much easier. Since we already have the original input data `x`, we can simply ask CNN to produce weight `φ`.
            <img src="https://user-images.githubusercontent.com/31917400/86669433-7dfa5900-bfeb-11ea-9160-c33cde0b9c08.jpg"/>
            
-           - Once we pass our initial data `x` through our [first neural network] as an encoder with parameters`φ`, it returns `m`,`s^2` which are parameters of `q(t)`. How `t` are distributed? 
+           - Once we pass our initial data `x` through our [first neural network] as an encoder with parameters`φ`, it returns `m`,`s^2` which are parameters of `q(t)`. How `t` are distributed? Normally...
              - ## We found `q(t)` which is an unique mixing coefficient function. Interestingly, we forget about the mixing coefficient and simply do MonteCarlo Sampling from this distribution`q(t)` to get random data pt `t`.  
-         - Finally, we pass this sampled vector `T` into the `second neural network` with parameters`w`. 
+         - Now, we know `t` so we can get `w`! Let's pass this sampled vector `T` into the `second neural network` to get parameters`w`. 
            - It outputs us the distribution that are as close to the input data as possible.
            <img src="https://user-images.githubusercontent.com/31917400/86671417-881d5700-bfed-11ea-9630-ec5df1f1d5ef.jpg"/>
            
