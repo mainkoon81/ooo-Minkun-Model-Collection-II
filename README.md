@@ -235,22 +235,23 @@ Only if we have `hidden variables`...
          - __[Find `w`]__ Now, we know `t` so we can get `w`! Let's pass this sampled vector `T` into the `second neural network` to get parameters`w`. 
            -: It outputs us the distribution that are as close to the input data as possible.
            <img src="https://user-images.githubusercontent.com/31917400/86837661-1d285a80-c097-11ea-936f-8dbafdce6945.jpg"/>
-           
-     - ## Next, how to define the CNN's weighting mechanism for `Φ` and `w` ? : Keep maximizing `Jensen's Lower bound` via each gradient calculation in CNN! 
-       - **`Latent variable distribution: q(t)` is useful!** Anomaly Detection for a new image which the network never saw, of some suspicious behavior or something else, our conditional neural network of the encoder can output your **latent variable distribution** as far away from the Gaussian. By looking at the distance between the variational distribution `q(t)` and the standard Gaussian, you can understand how anomalistic a certain point is ... wait. `P(t)` is Standard Normal?   
-       <img src="https://user-images.githubusercontent.com/31917400/72226852-bca7dd00-358d-11ea-98d6-20965d0dce46.jpg"/>
+
+[note] **`Latent variable distribution: q(t)` is useful!** Anomaly Detection for a new image which the network never saw, of some suspicious behavior or something else, our conditional neural network of the encoder can output your **latent variable distribution** as far away from the Gaussian. By looking at the distance between the variational distribution `q(t)` and the standard Gaussian, you can understand how anomalistic a certain point is ... wait. `P(t)` is Standard Normal?   
+<img src="https://user-images.githubusercontent.com/31917400/72226852-bca7dd00-358d-11ea-98d6-20965d0dce46.jpg"/>
+
+## Next, how to define the CNN's weighting mechanism for `Φ` and `w` ? : Keep maximizing `Jensen's Lower bound` via each gradient calculation in CNN! 
+ - Jensen's LB is the **objective function** in VAE (like.. MSE lost function in LM) 
+ - __Gradient of Encoder:__ Make an Expected Value ?
+   - we're passing our image through our Encoder, and compute the **usual gradient** of this first neural network with respect to its parameters `Φ` to get the parameters(Φ) of the variation distribution `q(t|Φ)`. We use **"log derivitive trick"** to approximate the gradient (make the form of expected value?) but it has some problem: `the variance of this stochastic approximation will be so high that you will have to use lots and lots of gradients to approximate this thing accurately`. How can we estimate this gradient with a much **smaller variance estimate**?  
+ - __Gradient of Decoder:__ Make an Expected Value ?
+   - we sample `t` from the variation distribution `q(t|Φ)` and put this `point` as input to the Decoder with parameters `w`. And then we just compute the **usual gradient** of this second neural network with respect to its parameters `w`.  
+   <img src="https://user-images.githubusercontent.com/31917400/72433990-7a9bb880-3792-11ea-8cfd-f3e6778fa8ad.jpg"/>
    
-       - __Gradient of Encoder:__ Make an Expected Value ?
-         - we're passing our image through our Encoder, and compute the **usual gradient** of this first neural network with respect to its parameters `Φ` to get the parameters(Φ) of the variation distribution `q(t|Φ)`. We use **"log derivitive trick"** to approximate the gradient (make the form of expected value?) but it has some problem: `the variance of this stochastic approximation will be so high that you will have to use lots and lots of gradients to approximate this thing accurately`. How can we estimate this gradient with a much **smaller variance estimate**?  
-       - __Gradient of Decoder:__ Make an Expected Value ?
-         - we sample `t` from the variation distribution `q(t|Φ)` and put this `point` as input to the Decoder with parameters `w`. And then we just compute the **usual gradient** of this second neural network with respect to its parameters `w`.  
-       <img src="https://user-images.githubusercontent.com/31917400/72433990-7a9bb880-3792-11ea-8cfd-f3e6778fa8ad.jpg"/>
-   
-       - __Issues of gradient of Encoder:__ 허벌창 그라디언트여? How can we better estimate this varying gradient with a much **smaller variance estimate**?  
-         - 왜 허벌창? our input data (x) is 이미지니깐...
-         - when sampling `t`, **"reparameterization trick"** of our latent variable makes the a Jensen's lower bound estimator easy to be optimized using standard stochastic gradient.
-         - so..you just sample from a identity matrix...All works will be done by `m` and `s^2`..
-       <img src="https://user-images.githubusercontent.com/31917400/73176973-afe6c580-4105-11ea-8822-49b2d202c156.jpg"/>
+   - __Issues of gradient of Encoder:__ 허벌창 그라디언트여? How can we better estimate this varying gradient with a much **smaller variance estimate**?  
+     - 왜 허벌창? our input data (x) is 이미지니깐...
+     - when sampling `t`, **"reparameterization trick"** of our latent variable makes the a Jensen's lower bound estimator easy to be optimized using standard stochastic gradient.
+     - so..you just sample from a identity matrix...All works will be done by `m` and `s^2`..
+     <img src="https://user-images.githubusercontent.com/31917400/73176973-afe6c580-4105-11ea-8822-49b2d202c156.jpg"/>
 
 
 ### Learning with priors
