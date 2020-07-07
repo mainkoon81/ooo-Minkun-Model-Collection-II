@@ -232,7 +232,7 @@ Only if we have `hidden variables`...
              - ## We found `q(t)` which is an unique mixing coefficient function. Interestingly, we forget about the mixing coefficient and simply do MonteCarlo Sampling from this distribution`q(t)` to get random data pt `t`.  
          - Finally, we pass this sampled vector `T` into the `second neural network` with parameters`w`. 
            - It outputs us the distribution that are as close to the input data as possible.
-           <img src="https://user-images.githubusercontent.com/31917400/72226599-d136a600-358a-11ea-9e13-69138c206a53.jpg"/>
+           <img src="https://user-images.githubusercontent.com/31917400/86671417-881d5700-bfed-11ea-9630-ec5df1f1d5ef.jpg"/>
            
  - ### Next, two CNN for Φ and w: Maximize Jensen's Lower bound
    - __[Note in Encoder]: Outlier Detection__???? for a new image which the network never saw, of some suspicious behavior or something else, our conditional neural network of the encoder can output your **latent variable distribution** as far away from the Gaussian. By looking at the distance between the variational distribution `q(t)` and the standard Gaussian, you can understand how anomalistic a certain point is ... they are outliers.    
