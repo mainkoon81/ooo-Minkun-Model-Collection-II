@@ -231,7 +231,7 @@ Only if we have `hidden variables`...
            <img src="https://user-images.githubusercontent.com/31917400/86669433-7dfa5900-bfeb-11ea-9160-c33cde0b9c08.jpg"/>
            
            -: Once we pass our initial data `x` through our [first neural network] as an encoder with parameters`φ`, it returns `m`,`s^2` which are parameters of `q(t)`. How `t` are distributed? Normally...
-             - ## We found `q(t)` = `P(t|x)` which is an unique mixing coefficient function...Interestingly, we forget about the mixing coefficient and simply do MonteCarlo Sampling from this distribution`q(t)` to get random data pt `t`.  
+             - ## We found `q(t)` = `P(t|x)` = `N(m, s^2)` which is an unique mixing coefficient function...Interestingly, we forget about the mixing coefficient and simply do MonteCarlo Sampling from this distribution`q(t)` to get random data pt `t`.  
          - __[Find `w`]__ Now, we know `t` so we can get `w`! Let's pass this sampled vector `T` into the `second neural network` to get parameters`w`. 
            -: It outputs us the distribution that are as close to the input data as possible.
            <img src="https://user-images.githubusercontent.com/31917400/86837661-1d285a80-c097-11ea-936f-8dbafdce6945.jpg"/>
