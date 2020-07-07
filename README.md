@@ -202,10 +202,11 @@ In contrast to the plain autoencoders, it has `sampling inside` and has `variati
                - How about Let CNN ignores other covariance values except "diag(![formula](https://render.githubusercontent.com/render/math?math=\sigma^2(t,w)))" 
                  - `Σ(t|w)` -> "diag(![formula](https://render.githubusercontent.com/render/math?math=\sigma^2(t,w)))" 
      - Now, let's train our model! Find the partameters - `t`, `w`
-       - `MLE`: Can you get some probability values for each datapoint? Let's maximize the density of our data given the parameters - `w`,`t` ? What is important is that the mixing coefficient `w` depends on `t`. If we have a latent variable, it's natural to go with Generalized EM-Algorithm, building `Jansen's bounds` on the MLE and maximize the sum of those bounds! But...you cannot imagine the analytical form of the likelihood `P(x|t)` = N( ![formula](https://render.githubusercontent.com/render/math?math=CNN_1(t)), ![formula](https://render.githubusercontent.com/render/math?math=CNN_2(t)) ). So..we can't get Sum of joints ???
+       - `MLE`: Can you get some probability values for each datapoint? Let's maximize the density of our data given the parameters - `w`,`t` ? What is important is that the mixing coefficient `w` depends on `t`. If we have a latent variable, it's natural to go with Generalized EM-Algorithm, building `Jansen's bounds` on the MLE and maximize the sum of those bounds! But...you cannot imagine the analytical form of the likelihood `P(x|t)` = N( ![formula](https://render.githubusercontent.com/render/math?math=CNN_1(t)), ![formula](https://render.githubusercontent.com/render/math?math=CNN_2(t,w)) ). So..we can't get Sum of joints ???
          - SUM(**`log[P(x|w)]`** per each observation`x`)..so try to come up with another "SUM" caused by the latent variable `t`. 
-       - `MCMC`? `VI`? ... ok, then can we obtain the un-normalized posterior:`P(x,t)`? Although knowing the prior `P(t)`, you cannot imagine the analytical form of the likelihood `P(x|t)` = N( ![formula](https://render.githubusercontent.com/render/math?math=CNN_1(t)), ![formula](https://render.githubusercontent.com/render/math?math=CNN_2(t)) ). So..we can't get Sum of joints???
-       - Then how to train? How to find the parameter in the first place?
+       - `MCMC`? `VI`? ... ok, then can we obtain the un-normalized posterior:`P(x,t)`? Although knowing the prior `P(t)`, you cannot imagine the analytical form of the likelihood `P(x|t)` = N( ![formula](https://render.githubusercontent.com/render/math?math=CNN_1(t,w)), ![formula](https://render.githubusercontent.com/render/math?math=CNN_2(t)) ). So..we can't get Sum of joints???
+       - Anyway, we decide our predictive null model - mean(x) - is explained by Neural Network.... 
+       - Then how to train? How to find the parameter - `t`,`w` - in the first place?
        
 ## You know what? we are start off with Decoder ?
 Only if we have `hidden variables`...
