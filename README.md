@@ -235,7 +235,7 @@ Only if we have `hidden variables`...
            <img src="https://user-images.githubusercontent.com/31917400/86671417-881d5700-bfed-11ea-9630-ec5df1f1d5ef.jpg"/>
            
      - ## Next, two CNN for Φ and w: Maximize Jensen's Lower bound
-       - __[Note in Encoder]: Outlier Detection__???? for a new image which the network never saw, of some suspicious behavior or something else, our conditional neural network of the encoder can output your **latent variable distribution** as far away from the Gaussian. By looking at the distance between the variational distribution `q(t)` and the standard Gaussian, you can understand how anomalistic a certain point is ... they are outliers.    
+       - __[Note in Encoder]: Anomaly Detection for a new image which the network never saw, of some suspicious behavior or something else, our conditional neural network of the encoder can output your **latent variable distribution** as far away from the Gaussian. By looking at the distance between the variational distribution `q(t)` and the standard Gaussian, you can understand how anomalistic a certain point is ... they are outliers?    
        <img src="https://user-images.githubusercontent.com/31917400/72226852-bca7dd00-358d-11ea-98d6-20965d0dce46.jpg"/>
    
        - __Gradient of Encoder:__ Make an Expected Value ?
