@@ -212,7 +212,7 @@ Only if we have `hidden variables`...
    <img src="https://user-images.githubusercontent.com/31917400/72342676-f3344380-36c4-11ea-90a2-ea05caf2e11a.jpg"/>
  
    - ## Overview: get some variational distribution `q(t)` or `LB(t)` ?
-   <img src="https://user-images.githubusercontent.com/31917400/86622394-bc762080-bfb7-11ea-9470-ad2fbd382d0f.jpeg"/>
+   <img src="https://user-images.githubusercontent.com/31917400/86674224-5bb70a00-bff0-11ea-91d6-c6907d62ae6a.jpeg"/>
    
    - *In VI, the **KL-Divergence** (where each `q(z)` is a `finger`) should be **`minimized`**. In VI, the **MLE estimator** is the joint of all `q(z)`,
    - *In VAE, the `Jansen's lower bound` as a **KL-Divergence** needs to be **`maximized`**..(where `q(z)` is a mixing coefficient for GMM form with `log(p/q)` as a Gaussian cluster) and each Jansen's lower bound is a `finger`. In VAE, the **MLE estimator** is the sum of a bunch of `Jansen's lower bound`ssss. 
