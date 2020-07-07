@@ -237,7 +237,7 @@ Only if we have `hidden variables`...
            <img src="https://user-images.githubusercontent.com/31917400/86837661-1d285a80-c097-11ea-936f-8dbafdce6945.jpg"/>
            
      - ## Next, how to define the NN's weighting mechanism for `Φ` and `w` ? : Maximize Jensen's Lower bound
-       - **`Latent variable distribution` is useful!** Anomaly Detection for a new image which the network never saw, of some suspicious behavior or something else, our conditional neural network of the encoder can output your **latent variable distribution** as far away from the Gaussian. By looking at the distance between the variational distribution `q(t)` and the standard Gaussian, you can understand how anomalistic a certain point is ... they are outliers?    
+       - **`Latent variable distribution: q(t)` is useful!** Anomaly Detection for a new image which the network never saw, of some suspicious behavior or something else, our conditional neural network of the encoder can output your **latent variable distribution** as far away from the Gaussian. By looking at the distance between the variational distribution `q(t)` and the standard Gaussian, you can understand how anomalistic a certain point is ... wait. `P(t)` is Standard Normal?   
        <img src="https://user-images.githubusercontent.com/31917400/72226852-bca7dd00-358d-11ea-98d6-20965d0dce46.jpg"/>
    
        - __Gradient of Encoder:__ Make an Expected Value ?
