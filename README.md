@@ -219,6 +219,10 @@ Only if we have `hidden variables`...
    - *In VI, the **KL-Divergence** (where each `q(z)` is a `finger`) should be **`minimized`**. In VI, the **MLE estimator** is the joint of all `q(z)`,
    - *In VAE, the `Jansen's lower bound` as a **KL-Divergence** needs to be **`maximized`**..(where `q(z)` is a mixing coefficient for GMM form with `log(p/q)` as a Gaussian cluster) and each Jansen's lower bound is a `finger`. In VAE, the **MLE estimator** is the sum of a bunch of `Jansen's lower bound`ssss. 
    
+   - *In VAE, the latent space will have highly compressed patterns that were learned from the data. Anomalies will not "fit" into the scheme of the latent vector and the abnormal part will get lost when generating the output. 
+     - That means not only will the Input-Output difference in VAE be larger than with that in AE, you will also be able to locate the abnormal part in a single sample.
+     - As for Anomaly detection task, you can compare the data with the latent spaces not the outputs, thus we won’t need the reconstruction part of the network? 
+   
    - __[Story]:__ `**Encoding**: Discover the latent parameter from our dataset` -> `**Decoding**: Generate new data based on the latent memberships`
      - Ok, let's do some reverse enigineering. **Back to the question. How to train?** How to find the parameter in the first place?
      - ## `t` and `w` is the key!
